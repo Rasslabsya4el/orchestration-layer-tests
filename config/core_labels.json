@@ -1,0 +1,21 @@
+{
+  "needs-triage": {"color": "fbca04", "description": "Maintainer needs to evaluate this issue"},
+  "needs-info": {"color": "d4c5f9", "description": "Waiting on reporter for more information"},
+  "ready-for-agent": {"color": "0e8a16", "description": "Fully specified, ready for an AFK agent"},
+  "ready-for-human": {"color": "1d76db", "description": "Requires human implementation"},
+  "wontfix": {"color": "ffffff", "description": "This will not be worked on"},
+  "bug": {"color": "d73a4a", "description": "Something isn't working"},
+  "enhancement": {"color": "a2eeef", "description": "New feature or request"},
+  "wayfinder:map": {"color": "5319e7", "description": "A wayfinder map: one big effort, its destination and decisions"},
+  "wayfinder:research": {"color": "1d76db", "description": "Wayfinder ticket: a fact a decision waits on (AFK)"},
+  "wayfinder:prototype": {"color": "fbca04", "description": "Wayfinder ticket: a rough artifact to react to (HITL)"},
+  "wayfinder:grilling": {"color": "d93f0b", "description": "Wayfinder ticket: a decision settled with the owner (HITL)"},
+  "wayfinder:task": {"color": "0e8a16", "description": "Wayfinder ticket: work that unblocks a decision"},
+  "autopilot": {"color": "5319e7", "description": "A goal worked by a background autopilot brain session"},
+  "autopilot-stuck": {"color": "b60205", "description": "The dispatcher stopped restarting this autopilot goal"},
+  "parked": {"color": "c5def5", "description": "waiting on a named event; not worked until it comes"},
+  "provisional": {"color": "d4c5f9", "description": "A decision the brain took for the owner on autopilot; revert with tools.agentops veto"},
+  "flow-fix": {"color": "e99695", "description": "A fix of the pipeline itself: heads every queue"},
+  "priority": {"color": "d93f0b", "description": "The owner's push: heads every queue, before flow-fix"},
+  "hard-push": {"color": "8a0a2f", "description": "A Priority ticket's merge cuts its repo's running batch"}
+}
