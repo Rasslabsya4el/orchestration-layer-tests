@@ -1,0 +1,56 @@
+name: tests
+
+on:
+  workflow_dispatch:
+    inputs:
+      parts:
+        description: "how many parts the suite is split into (each part is one GitHub machine)"
+        type: string
+        default: "5"
+      ref:
+        description: "git ref to test"
+        type: string
+        default: "main"
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.matrix.outputs.matrix }}
+    steps:
+      - id: matrix
+        env:
+          PARTS: ${{ inputs.parts }}
+        run: |
+          set -eu
+          case "$PARTS" in
+            ''|*[!0-9]*) echo "parts must be a whole number, got '$PARTS'"; exit 1 ;;
+          esac
+          [ "$PARTS" -ge 1 ] || { echo "parts must be at least 1"; exit 1; }
+          echo "matrix=$(seq 1 "$PARTS" | jq -R -s -c 'split("\n")[:-1] | map(tonumber)')" >> "$GITHUB_OUTPUT"
+
+  test:
+    needs: plan
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    strategy:
+      fail-fast: false
+      matrix:
+        part: ${{ fromJSON(needs.plan.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.ref }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pytest pytest-xdist pytest-testmon psutil
+      - name: git identity
+        run: |
+          git config --global user.name ci
+          git config --global user.email ci@example.invalid
+          git config --global init.defaultBranch main
+      - name: pytest part
+        env:
+          TEST_SHARD: ${{ matrix.part }}/${{ inputs.parts }}
+        run: python -m pytest tests -q -n auto -p tools.agentops.test_shard_plugin -m "not slow" -p no:faulthandler
