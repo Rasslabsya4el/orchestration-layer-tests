@@ -1,0 +1,7 @@
+{
+  "name": "pob-slots",
+  "version": "0.3.0",
+  "description": "Monitor pane: agents, machine load, merge status, ticket tree, cost and progress; a project's add-on adds its own cards",
+  "author": { "name": "orchestration core" },
+  "types": "./types/index.d.ts"
+}
