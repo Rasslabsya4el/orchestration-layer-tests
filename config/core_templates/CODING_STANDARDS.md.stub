@@ -1,0 +1,11 @@
+# Coding standards
+
+The rules this repo's code and the work around it are written against, one rule per line, each ending with its source in parentheses.
+
+## 1. Core rules
+
+{core_rules}
+
+## 2. This repo's rules
+
+This repo adds no rules yet.
