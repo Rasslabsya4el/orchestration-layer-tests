@@ -1,0 +1,6 @@
+{
+  "name": "ticket-links",
+  "version": "0.1.0",
+  "description": "Desktop chat: a reply with a GitHub issue link draws the issue as a short #N link, the text unchanged",
+  "author": { "name": "orchestration core" }
+}
