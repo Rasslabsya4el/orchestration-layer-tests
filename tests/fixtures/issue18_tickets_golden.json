@@ -1,0 +1,219 @@
+{
+ "goals": [
+  6,
+  1
+ ],
+ "loose": [
+  10,
+  9
+ ],
+ "groups": {
+  "needs-triage": 1,
+  "needs-info": 1,
+  "ready-for-agent": 1,
+  "parked": 1,
+  "blocked": 1,
+  "no label": 1
+ },
+ "issues": {
+  "1": {
+   "n": 1,
+   "title": "t1",
+   "open": true,
+   "reason": null,
+   "labels": [
+    "ready-for-agent"
+   ],
+   "parent": null,
+   "blockers": [],
+   "created": "2026-09-02T10:00:00Z",
+   "author": "owner",
+   "kids": [
+    4,
+    2
+   ],
+   "parked_on_run": false,
+   "parked": false,
+   "merge_lost": false,
+   "group": "ready-for-agent",
+   "state": "ready"
+  },
+  "2": {
+   "n": 2,
+   "title": "t2",
+   "open": false,
+   "reason": "COMPLETED",
+   "labels": [],
+   "parent": 1,
+   "blockers": [],
+   "created": "2026-09-03T10:00:00Z",
+   "author": "owner",
+   "kids": [
+    3
+   ],
+   "parked_on_run": false,
+   "parked": false,
+   "merge_lost": false,
+   "group": null,
+   "state": "closed"
+  },
+  "3": {
+   "n": 3,
+   "title": "t3",
+   "open": false,
+   "reason": "NOT_PLANNED",
+   "labels": [
+    "wontfix"
+   ],
+   "parent": 2,
+   "blockers": [],
+   "created": "2026-09-04T10:00:00Z",
+   "author": "owner",
+   "kids": [
+    11
+   ],
+   "parked_on_run": false,
+   "parked": false,
+   "merge_lost": false,
+   "group": null,
+   "state": "closed"
+  },
+  "4": {
+   "n": 4,
+   "title": "t4",
+   "open": true,
+   "reason": null,
+   "labels": [
+    "needs-info"
+   ],
+   "parent": 1,
+   "blockers": [],
+   "created": "2026-09-05T10:00:00Z",
+   "author": "owner",
+   "kids": [],
+   "parked_on_run": false,
+   "parked": false,
+   "merge_lost": false,
+   "group": "needs-info",
+   "state": "owner"
+  },
+  "6": {
+   "n": 6,
+   "title": "t6",
+   "open": true,
+   "reason": null,
+   "labels": [
+    "parked"
+   ],
+   "parent": 5,
+   "blockers": [],
+   "created": "2026-09-07T10:00:00Z",
+   "author": "owner",
+   "kids": [
+    7
+   ],
+   "parked_on_run": false,
+   "parked": true,
+   "merge_lost": false,
+   "group": "parked",
+   "state": "open"
+  },
+  "7": {
+   "n": 7,
+   "title": "t7",
+   "open": true,
+   "reason": null,
+   "labels": [],
+   "parent": 6,
+   "blockers": [
+    4
+   ],
+   "created": "2026-09-08T10:00:00Z",
+   "author": "owner",
+   "kids": [
+    8
+   ],
+   "parked_on_run": true,
+   "parked": false,
+   "merge_lost": false,
+   "group": "blocked",
+   "state": "blocked",
+   "parked_run": "<!-- parked-on-run: job 7 -->"
+  },
+  "8": {
+   "n": 8,
+   "title": "t8",
+   "open": false,
+   "reason": "COMPLETED",
+   "labels": [],
+   "parent": 7,
+   "blockers": [
+    4
+   ],
+   "created": "2026-09-09T10:00:00Z",
+   "author": "owner",
+   "kids": [],
+   "parked_on_run": false,
+   "parked": false,
+   "merge_lost": false,
+   "group": null,
+   "state": "closed"
+  },
+  "9": {
+   "n": 9,
+   "title": "t9",
+   "open": true,
+   "reason": null,
+   "labels": [
+    "needs-triage"
+   ],
+   "parent": null,
+   "blockers": [
+    1
+   ],
+   "created": "2026-09-01T10:00:00Z",
+   "author": "owner",
+   "kids": [],
+   "parked_on_run": false,
+   "parked": false,
+   "merge_lost": false,
+   "group": "needs-triage",
+   "state": "blocked"
+  },
+  "10": {
+   "n": 10,
+   "title": "t10",
+   "open": true,
+   "reason": null,
+   "labels": [],
+   "parent": null,
+   "blockers": [],
+   "created": "2026-09-02T10:00:00Z",
+   "author": "owner",
+   "kids": [],
+   "parked_on_run": false,
+   "parked": false,
+   "merge_lost": false,
+   "group": "no label",
+   "state": "open",
+   "parked_run": "<!-- parked-on-run: job 7 -->"
+  },
+  "11": {
+   "n": 11,
+   "title": "t11",
+   "open": false,
+   "reason": "COMPLETED",
+   "labels": [],
+   "parent": 3,
+   "blockers": [],
+   "created": "2026-09-03T10:00:00Z",
+   "author": "owner",
+   "kids": [],
+   "parked_on_run": false,
+   "parked": false,
+   "merge_lost": false,
+   "group": null,
+   "state": "closed"
+  }
+ }
+}

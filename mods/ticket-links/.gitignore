@@ -1,0 +1,10 @@
+.cache/
+__pycache__/
+.pytest_cache/
+node_modules/
+*.bak
+*.log
+*.jsonl
+*.before-*
+hooks/draw.ts
+.claude-plugin/types/
