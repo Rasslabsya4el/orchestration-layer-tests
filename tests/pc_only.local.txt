@@ -1,0 +1,3 @@
+# This repo's own PC-only test files (#305); a core update never touches this file.
+# One repo-relative path per line, sorted.
+tests/test_issue349_launcher.py

@@ -1,0 +1,5 @@
+---
+description: Open this repo's monitor pane (machine, runs, tickets)
+disable-model-invocation: true
+---
+If no installed monitor answered /monitor in this chat, say in ONE line that this repo has no monitor, and do nothing else.
