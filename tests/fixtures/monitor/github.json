@@ -1,0 +1,20 @@
+{
+  "at_ms": 1761242400000,
+  "refresh_s": 600,
+  "data": {
+    "at": "2026-10-23T18:00:00",
+    "merges": [
+      {"at": "2026-10-23 17:24:27", "branch": "i319-fix", "issues": [319], "outcome": "landed", "reason": "pushed", "place": "GitHub 6/6 parts done"},
+      {"at": "2026-10-23 16:46:10", "branch": "i319-merge", "issues": [319], "outcome": "failed", "reason": "red-suite", "place": "GitHub 6/6 parts done"},
+      {"at": "2026-10-23 15:21:32", "branch": "i318", "issues": [318], "outcome": "landed", "reason": "pushed", "place": "PC (GitHub lost)"},
+      {"at": "2026-10-23 14:02:10", "branch": "i317", "issues": [317], "outcome": "failed", "reason": "red-suite", "place": "GitHub 7/7 parts done, 5 machines (+ 17 tests on the PC)"},
+      {"at": "2026-10-23 13:10:05", "branch": "i316-u1", "issues": [316], "outcome": "landed", "reason": "pushed", "place": "GitHub 2/2 parts done, 1 machines; re-check of 12 on the PC (red, no test named)"},
+      {"at": "2026-10-23 12:00:00", "branch": "i315", "issues": [315], "outcome": "landed", "reason": "pushed", "place": "PC (GitHub off)"}
+    ],
+    "machines": {"used": 1, "total": 20},
+    "minutes": [
+      {"slug": "owner/alpha", "name": "alpha-repo", "used": 412, "cap": 2000, "month": "2026-10"},
+      {"slug": "owner/beta", "name": "beta repo", "used": 1988, "cap": 2000, "month": "2026-10"}
+    ]
+  }
+}
