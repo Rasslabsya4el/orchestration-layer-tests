@@ -1,0 +1,28 @@
+// This project's own constants for the monitor pane, written once by the port; `core update` only appends an export the core's hooks newly import and never changes a line.
+// The plugin id of every atom stays spelled 'pob-slots' in register.tsx: the state library's scan reads it as a string literal there.
+export const MOD_DIR = 'C:/Users/user/.claude/mods/orch-monitor'
+export const SCRIPT = `${MOD_DIR}/bin/collect.py`
+// #142 u2: the fast payload an always-running collector writes ({ at_ms, refresh_s, data }); the pane's fast pull reads it first
+export const COLLECTOR_FAST = `${MOD_DIR}/bin/.cache/collector-fast.json`
+export const WORD_CACHE = `${MOD_DIR}/bin/.cache/activity.json`
+export const WORD_USAGE = `${MOD_DIR}/activity-usage.jsonl`
+export const REDRAW_LOG = `${MOD_DIR}/bin/.cache/redraws.log`
+export const SILENCE_FLAG = `${MOD_DIR}/bin/.cache/pane.silenced`
+export const REPO = 'C:/Coding/orchestration-layer'
+export const REPO_NAME = 'Rasslabsya4el/orchestration-layer'
+export const GH = `https://github.com/${REPO_NAME}/issues/`
+// The base-class colours of this project's classes (its add-on's rows read them): none here.
+export const CLASS: Record<string, string> = {}
+export const PANE = 'orch'
+export const TITLE = 'orchestration-layer'
+export const WORK_KEY = 'work' as const
+export const WORK_NAME = 'work'
+export const PROJECT_ICONS: Record<string, ['o' | 'l', string]> = {}
+export const HOST_ICON: Record<string, string> = {}
+export const SLOTS_LABEL = 'jobs'
+export const PROJECT_ACT_ICON: [RegExp, string][] = []
+export const PROJECT_WORDS: string[] = []
+export const MACHINES: [string, (v: any) => any][] = [['pc', v => v.machine]]
+export const JOB_QUEUES = (f: any): any[] => []
+export const JOB_WAIT = 'ждёт задачу'
+export const OPENED_TEXT = `${TITLE} monitor pane opened.`
