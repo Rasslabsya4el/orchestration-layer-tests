@@ -1,0 +1,199 @@
+{
+ "747": {
+  "session": "06001236",
+  "claimed": "2026-10-10T10:49:43Z",
+  "ended": "2026-10-10T13:49:32Z",
+  "comments": [
+   {
+    "createdAt": "2026-10-10T10:58:58Z",
+    "body": "**Checkpoint 1 (ORCH 06001236): #747 taken; four jobs submitted, parked on them.** Issue is one measurement, no code: the cut is whole (one unit, ORCH's own work: submit, wait, compare; expected ~8 own turns).\n\nBuild 2 named by the rule: `hit_penance_brand` seed 4 base row, 2,695 s = 45 min (the shortest after stormbrand's 2,895 s is not it; stormbrand is build 1 anyway); both rows `loop_stop converged` in the weekly run `20261005-1220-gate-20261005` (args.json: `loop_seconds` 2400, `gear wishlist`, `no_variants` false; the base row only is built here: `--no-variants`, as #569's pair).\n\nComman"
+   },
+   {
+    "createdAt": "2026-10-10T11:18:05Z",
+    "body": "**Checkpoint 2 (ORCH 06001236, finishing):** four jobs still queued/running (ids in checkpoint 1); next session: when they hand back, copy the laptop recordings beside the PC's and run `scripts/compare_calls.py`, close with the table."
+   },
+   {
+    "createdAt": "2026-10-10T11:32:11Z",
+    "body": "<!-- runs-daemon result -->\r\nRun `P1-#747` finished on host `pc`: rc 2 (failed) in 33 min.\r\n\r\n- job: `j-20261010-1258-86c3` (P1, 1 worker(s))\r\n- command: `python scripts/benchmark.py stormbrand --seed 4 --gear wishlist --no-variants --loop-seconds 2400 --workers 1 --record-calls artifacts/proof-747/stormbrand-pc --tag P1-#747`\r\n- pinned commit: `ada62c9`\r\n- out file: `C:\\Coding\\poe-junkroan-v2\\artifacts\\runs\\20261010-1258-P1-#747.out`\r\n- run dir: `C:\\Coding\\poe-junkroan-v2\\snapshots\\20261010-1258-P1-#747\\artifacts\\benchmark\\20261010-1258-P1-#747`\r\n- results table: `C:\\Coding\\poe-junkroan-v2\\sn"
+   },
+   {
+    "createdAt": "2026-10-10T11:32:19Z",
+    "body": "<!-- runs-daemon result -->\r\nRun `P1-#747-2` finished on host `pc`: rc 2 (failed) in 16 min.\r\n\r\n- job: `j-20261010-1258-5717` (P1, 1 worker(s))\r\n- command: `python scripts/benchmark.py hit_penance_brand --seed 4 --gear wishlist --no-variants --loop-seconds 2400 --workers 1 --record-calls artifacts/proof-747/hit_penance_brand-pc --tag P1-#747-2`\r\n- pinned commit: `ada62c9`\r\n- out file: `C:\\Coding\\poe-junkroan-v2\\artifacts\\runs\\20261010-1316-P1-#747-2.out`\r\n- run dir: `C:\\Coding\\poe-junkroan-v2\\snapshots\\20261010-1316-P1-#747-2\\artifacts\\benchmark\\20261010-1316-P1-#747-2`\r\n\r\nLast 20 lines of the"
+   },
+   {
+    "createdAt": "2026-10-10T11:33:26Z",
+    "body": "Keymaster, anomaly `job_failed:j-20261010-1258-86c3` (PC half, `stormbrand --seed 4 --gear wishlist --no-variants --workers 1`, tag P1-#747).\n\n- The job waited ~23 min for a PoB slot (RAM free 7.7 GB < 8 GB), got slot 6 at 13:21, then the first build failed at once: `PoBHeadlessHostContractError: Timed out waiting for the headless PoB worker protocol. Call trial_stats, trials 75, limit 60 s, elapsed 60 s.`\n- Result: 0 counted rows, rc 2. Nothing requeued by me.\n- Out: `artifacts/runs/20261010-1258-P1-#747.out`; report: `snapshots/20261010-1258-P1-#747/artifacts/benchmark/20261010-1258-P1-#747/"
+   },
+   {
+    "createdAt": "2026-10-10T11:37:46Z",
+    "body": "Keymaster, anomaly `job_failed:j-20261010-1258-5717` (PC half, `hit_penance_brand --seed 4 --gear wishlist --no-variants --workers 1`, tag P1-#747-2).\n\n- Waited ~5 min for a PoB slot (RAM free 6.0 GB < 8 GB), got slot 5 at 13:21, then the build failed at once: `PoBHeadlessHostContractError: Timed out waiting for the headless PoB worker protocol. Call trial_stats, trials 33, limit 60 s, elapsed 60 s.` 0 counted rows, rc 2.\n- Same error as the sibling job `P1-#747` (stormbrand, trials 75), both right after a slot was granted under RAM pressure (10 pytest processes were running on the PC). Not di"
+   },
+   {
+    "createdAt": "2026-10-10T11:52:45Z",
+    "body": "**Brain: PoB, 2026-10-10 13:5x: both PC halves died on the PoB reply timeout of #724; resubmit them, the laptop halves stand.**\n\n| job | host | state at 13:52 |\n|---|---|---|\n| `j-20261010-1258-86c3` stormbrand | pc | failed after 33 min (`trial_stats`, trials 75, limit 60 s) |\n| `j-20261010-1258-5717` hit_penance_brand | pc | failed after 16 min (`trial_stats`, trials 33, limit 60 s, elapsed 60 s) |\n| `j-20261010-1258-0a0e` stormbrand | laptop | running, 53 min; snapshot `@ada62c9a` read in `daemon-laptop.err` |\n| `j-20261010-1258-b729` hit_penance_brand | laptop | running, 53 min; snapshot `"
+   },
+   {
+    "createdAt": "2026-10-10T12:02:25Z",
+    "body": "<!-- runs-daemon result -->\r\nRun `P1-#747` finished on host `laptop`: rc 0 (done) in 62 min.\r\n\r\n- job: `j-20261010-1258-0a0e` (P1, 1 worker(s))\r\n- command: `python scripts/benchmark.py stormbrand --seed 4 --gear wishlist --no-variants --loop-seconds 2400 --workers 1 --record-calls artifacts/proof-747/stormbrand-laptop --tag P1-#747`\r\n- pinned commit: `ada62c9`\r\n- out file: `C:\\Coding\\poe-junkroan-v2-daemon\\artifacts\\runs\\20261010-1258-P1-#747.out`\r\n- run dir: `C:\\Coding\\poe-junkroan-v2-daemon\\snapshots\\20261010-1258-P1-#747\\artifacts\\benchmark\\20261010-1258-P1-#747`\r\n- results table: `C:\\Codin"
+   },
+   {
+    "createdAt": "2026-10-10T12:02:29Z",
+    "body": "<!-- runs-daemon result -->\r\nRun `P1-#747-2` finished on host `laptop`: rc 0 (done) in 62 min.\r\n\r\n- job: `j-20261010-1258-b729` (P1, 1 worker(s))\r\n- command: `python scripts/benchmark.py hit_penance_brand --seed 4 --gear wishlist --no-variants --loop-seconds 2400 --workers 1 --record-calls artifacts/proof-747/hit_penance_brand-laptop --tag P1-#747-2`\r\n- pinned commit: `ada62c9`\r\n- out file: `C:\\Coding\\poe-junkroan-v2-daemon\\artifacts\\runs\\20261010-1258-P1-#747-2.out`\r\n- run dir: `C:\\Coding\\poe-junkroan-v2-daemon\\snapshots\\20261010-1258-P1-#747-2\\artifacts\\benchmark\\20261010-1258-P1-#747-2`\r\n- "
+   }
+  ]
+ },
+ "816": {
+  "session": "be507183",
+  "claimed": "2026-10-11T07:12:44Z",
+  "ended": "2026-10-11T07:28:06Z",
+  "comments": [
+   {
+    "createdAt": "2026-10-11T02:20:20Z",
+    "body": "**Checkpoint 1 (ORCH 33f19014 takes #816).** Cut (the fix depends on what the reading names, so unit 2 is cut after unit 1):\n\n| unit | outcome | files it edits | its test | needs |\n|---|---|---|---|---|\n| 1 of 3 (start-reading) | row 1: the 3 x 4 table (stormbrand, cold_dot, burning_arrow_snipe x (a) saved config no re-lane/rejudge, (b) after re-lane, (c) after rejudge, (d) as the bench scores its start), first column with violation > 0 named; one PobSession, 1 slot | new `tools/rig816/start_reading.py`, `docs/research/2026-10-11-replay-start-reading.md` | the script prints the table; rerun-ab"
+   },
+   {
+    "createdAt": "2026-10-11T02:24:19Z",
+    "body": "**Checkpoint 2 (ORCH 33f19014): row 1 read, row 2 STOP CONDITION HIT -> `needs-info`.** Unit 1 `816-u1` 3579d5bc (reader `tools/rig816/start_reading.py`, doc `docs/research/2026-10-11-replay-start-reading.md`, 1 PobSession, 1 min 4 s, 1 test passes); merge queued without `--issue` (`var/agentops/results/20261011T042404-merge-816-u1.json`), so it re-adds nothing to this ticket. Rerun: `PYTHONPATH=<wt>/src python tools/rig816/start_reading.py [slug ...]`.\n\n| build | (a) saved config, today's author objective, no relane/rejudge | (b) after relane + open_contexts | (c) after rejudge | (d) bench st"
+   },
+   {
+    "createdAt": "2026-10-11T02:25:31Z",
+    "body": "**The brain's answer to checkpoint 2 (chat \"Brain: PoB\", 05:1x): keep the start, read the pair.** The bench is honest: the 04.10 builds are broken by today's rules as loaded. A replay proof is base against head from the same start, so tonight's pairs stand; the wrong part was the report's percent against the delivered build. No recorded-rules objective, no re-delivery of the smoke set tonight (the weekly core run of Monday 12.10 gives a fresh start set). The ticket is rewritten (new title, rule, rows 1-5): the report marks a broken start and shows base against head only; row 3 delivers one fresh stormbrand and checks that it starts its replay with violation 0. Label back to `ready-for-agent`."
+   },
+   {
+    "createdAt": "2026-10-11T02:28:46Z",
+    "body": "**Checkpoint 3 (ORCH 24d1f6ac takes #816 again, after the brain's rewrite).** Unit 1 of the old cut (reader `tools/rig816/start_reading.py`, merged f..949781e9) stands; the old units 2-3 are dropped. New cut against the rewritten rows 1-5:\n\n| unit | outcome | files it edits | its test | needs |\n|---|---|---|---|---|\n| 1 of 3 (report) | rows 1-2: `render_report` marks a broken start (first lines name build, violation, floors; that build's row and the Summary/Paired blocks show no percent against start or delivered value); a feasible start renders byte for byte as before | `scripts/replay_bench."
+   },
+   {
+    "createdAt": "2026-10-11T02:31:12Z",
+    "body": "**Checkpoint 4 (ORCH): unit 1 done, rows 3 and 5 parked on 3 PoB jobs; row 4 read.** Branch `816-r` = `076d15bf` (worktree `wt-816-r`, not merged yet: merges after row 5 reads identical). Unit 1 (worker, 1 spawn): `tests/test_issue816_start_broken.py` + `scripts/replay_bench.py` `_start_broken` / `render_report`; `python -m pytest tests/test_issue816_start_broken.py tests/test_replay_bench.py -q` = 10 passed; row 1 red on base (`assert 0 == 1` on the count of `Start broken` lines), green after: 1 line naming the 5 floors, 0 percent cells in the stormbrand row (row built from the test's row builder with the 04.10 stormbrand floors; the saved file `artifacts/replay/20261011-0127-b795-gear-base/results.json` carries the same 5). Row 2: feasible render == a frozen copy of the old module (`tests/_replay_bench_before_816.py`), loop + weapon-base + trace + paired. The `## Paired Comparison` still pairs the two runs through `gain_percent`, so base against head stays."
+   },
+   {
+    "createdAt": "2026-10-11T04:03:42Z",
+    "body": "<!-- runs-daemon result -->\r\nRun `P1-#816-2` finished on host `pc`: rc 0 (done) in 88 s.\r\n\r\n- job: `j-20261011-0430-98a5` (P1, 1 worker(s))\r\n- command: `python scripts/replay_bench.py --builds artifacts/benchmark/20261004-0020-smoke-14-11/cold_dot-s4.pob.txt --move weapon-base --seed 1 --workers 1 --tag b816-base --record-calls artifacts/proof-816/base`\r\n- pinned commit: `949781e9`\r\n- out file: `C:\\Coding\\poe-junkroan-v2\\artifacts\\runs\\20261011-0602-b816-base.out`\r\n\r\nLast 20 lines of the out file:\r\n\r\n```\r\n  cold_dot                       302,231 -> 302,231 +0.00% 42 s\r\nreport: C:\\Coding\\poe-ju"
+   },
+   {
+    "createdAt": "2026-10-11T04:38:53Z",
+    "body": "<!-- runs-daemon result -->\r\nRun `P1-#816-3` finished on host `pc`: rc 0 (done) in 88 s.\r\n\r\n- job: `j-20261011-0430-2696` (P1, 1 worker(s))\r\n- command: `python scripts/replay_bench.py --builds artifacts/benchmark/20261004-0020-smoke-14-11/cold_dot-s4.pob.txt --move weapon-base --seed 1 --workers 1 --tag b816-head --record-calls artifacts/proof-816/head`\r\n- pinned commit: `076d15bf`\r\n- out file: `C:\\Coding\\poe-junkroan-v2\\artifacts\\runs\\20261011-0637-b816-head.out`\r\n\r\nLast 20 lines of the out file:\r\n\r\n```\r\n  cold_dot                       302,231 -> 302,231 +0.00% 39 s\r\nreport: C:\\Coding\\poe-ju"
+   },
+   {
+    "createdAt": "2026-10-11T07:12:01Z",
+    "body": "<!-- runs-daemon result -->\r\nRun `P1-#816` finished on host `pc`: rc 0 (done) in 3 h 25 min.\r\n\r\n- job: `j-20261011-0430-e070` (P1, 2 worker(s))\r\n- command: `python scripts/benchmark.py stormbrand --seed 1 --gear wishlist --loop-seconds 2400 --workers 2 --tag P1-#816`\r\n- pinned commit: `949781e9`\r\n- out file: `C:\\Coding\\poe-junkroan-v2\\artifacts\\runs\\20261011-0546-P1-#816.out`\r\n- run dir: `C:\\Coding\\poe-junkroan-v2\\snapshots\\20261011-0546-P1-#816\\artifacts\\benchmark\\20261011-0546-P1-#816`\r\n- results table: `C:\\Coding\\poe-junkroan-v2\\snapshots\\20261011-0546-P1-#816\\artifacts\\benchmark\\20261011-0"
+   },
+   {
+    "createdAt": "2026-10-11T07:14:43Z",
+    "body": "**Checkpoint 5 (ORCH be507183 takes #816 over from 8b999e49): row 5 MET, row 3 NOT MET at the start check -> `needs-info`, branch `816-r` @ 076d15bf NOT merged.**\n\nRow 5 (cold_dot-s4, `--move weapon-base --seed 1`, base 949781e9 vs head 076d15bf): `python scripts/compare_calls.py artifacts/proof-816/base artifacts/proof-816/head` -> `cold_dot-s4.calls.jsonl: 297 calls vs 297 calls: IDENTICAL`, 1 of 1 transcripts identical; value after 302,231 both.\n\nRow 3 (fresh stormbrand seed 1 on main 949781e9, job j-20261011-0430-e070, rc 0, 3 h 25 min; delivery recorded `ours` 2,223,227.81): start-only re"
+   },
+   {
+    "createdAt": "2026-10-11T07:15:38Z",
+    "body": "**The brain's answer to checkpoint 5 (chat \"Brain: PoB\", 09:3x): a defect until a reading shows otherwise.** The fresh stormbrand is feasible at delivery and as loaded (0.0000), and infeasible (0.083, five floors) only after `judging.rejudge` in the bench: one build, one day, two verdicts. Which side is wrong is not known, so the body gets a section \"Decided after row 3\" and rows 6-8: row 6 is a reading first (the 5 floors, value and floor at delivery against after the rejudge, with file:line of where each floor is computed); row 7 fixes the bench when it builds a floor set the pipeline did not use; row 8 stops with `needs-info` when the pipeline's delivery check is the side that misses floors. **Branch `816-r` 076d15bf (rows 1, 2, 5) merges now**; the ticket stays open for rows 6-8. Label back to `ready-for-agent`."
+   }
+  ]
+ },
+ "821": {
+  "session": "a631eb4e",
+  "claimed": "2026-10-11T03:19:02Z",
+  "ended": "2026-10-11T03:43:41Z",
+  "comments": [
+   {
+    "createdAt": "2026-10-11T03:23:53Z",
+    "body": "**Checkpoint 1 (ORCH a631eb4e takes #821).** Cut (the measurement is sequential, ~1 h 40 min of wall time, so only the read can run side by side with anything):\n\n| unit | outcome | files it edits | its test | needs |\n|---|---|---|---|---|\n| 1 of 3 (read) `researcher-how`, running | how the pane can be closed/opened without the owner's hands (mod flag, `pane_look.py press`), where redraw/error lines are written, how the renderer pid is picked | none | the report | none |\n| 2 of 3 (sampler + toggle) | one detached sampler script writing the table (stretch, state, start MB, end MB, MB/min, redraw"
+   },
+   {
+    "createdAt": "2026-10-11T03:24:35Z",
+    "body": "**Checkpoint 2 (ORCH a631eb4e): unit 1 read; row 5 applies, parked `needs-info`.** Read (researcher-how, file:line):\n- The mod has NO way to be closed or silenced from inside: `hooks.json:1` registers only `./register.tsx`; the pane is opened at `register.tsx:1121` (`start()`) and `:1151` (`/pob`), pulls run on `$.clock.every` (`:1116-1120`, 5 s fast, 3 min tickets, 10 min slow, 15 min orch, each `python collect.py`, `:1069`), with no flag file, env var or close hook (`ui.close` exists in the engine types, `index.d.ts:2504`, the mod hooks nothing); redraws are rationed to one per 15 s unless t"
+   },
+   {
+    "createdAt": "2026-10-11T03:40:33Z",
+    "body": "**The brain's answer to the needs-info on row 5 (autopilot #780, session 17).**\n\nDecision (the brain's own, not provisional): **(a), the switch inside the mod.** (b) is out: the owner does no manual steps. (c) is out: the question \"does the pane leak\" stays open without a measure. No click in his window, ever: `pane_look.py press` stays refused for this ticket.\n\nWhy (a) measures the right thing: what the pane can leak is its own work, the pulls (`register.tsx:1116-1120`, `python collect.py` at `:1069`) and the redraws (6037 in one hour). A pane that is drawn once and then does neither is the \""
+   },
+   {
+    "createdAt": "2026-10-11T03:42:42Z",
+    "body": "**Checkpoint 3 (ORCH 5deb..., takes #821 after the brain's answer; branch `orch-821` off main c7b14829).** Rows are the brain's 8 rows above. Cut:\n\n| unit | outcome | files it edits | its test | needs |\n|---|---|---|---|---|\n| 1 of 3 (mod switch + error line) | the mod skips every pull and redraw while the flag file `bin/.cache/pane.silenced` exists, resumes within one fast tick when it is removed; a failing pull/render writes one `<ISO time> <sessionId> error <kind> <message>` line to the redraw log; README names the flag | `mods/pob-slots/hooks/register.tsx`, its plugin test, `mods/pob-slots"
+   }
+  ]
+ },
+ "736": {
+  "session": "7a9ac051",
+  "claimed": "2026-10-10T09:23:59Z",
+  "ended": "2026-10-10T09:48:59Z",
+  "comments": [
+   {
+    "createdAt": "2026-10-10T09:24:53Z",
+    "body": "Checkpoint 1 (ORCH, claimed). The issue is already one unit (one test file, one fix, no production code), so no cut table: one unit, `none` needs.\n\n| unit | outcome | files it edits | its test | needs |\n|---|---|---|---|---|\n| 1 of 1 (fake clock waits for the percent) | the test's clock advances only once the suite's out file shows a percent; a late start no longer shifts the line | tests/test_agentops_merge_suite_restart_687.py | that file; rows 1-3 | none |\n\nOwn piece: I work it myself, expected 8 own turns (one file already in context, a 12-line change plus 30 runs). Read: `SuiteRestart.tic"
+   }
+  ]
+ },
+ "768": {
+  "session": "6b41a37d",
+  "claimed": "2026-10-10T17:16:27Z",
+  "ended": "2026-10-10T17:35:23Z",
+  "comments": [
+   {
+    "createdAt": "2026-10-10T16:05:31Z",
+    "body": "Checkpoint 1 (ORCH, claimed #768). Cut: the issue is ONE unit (one file, `src/junkroan/runs/daemon.py`, one test file), so it stays whole.\n\n| unit | outcome | files it edits | its test | needs |\n|---|---|---|---|---|\n| 1 of 1 (anchored load sample) | the load record's next sample is due on an anchored 30 s schedule (not \"30 s after the last reading's start, on a tick that comes every ~10 s + tick work\"), and `run` sleeps no longer than the time left to that due moment, so a 15 s reading inside a 20 s tick still gives a line every 30 s | `src/junkroan/runs/daemon.py` (`load_record_pass`, `spike"
+   },
+   {
+    "createdAt": "2026-10-10T16:08:44Z",
+    "body": "Checkpoint 2 (ORCH f50e4a1b): unit 1 of 1 DONE by ORCH itself (expected 8 own turns, took 9), branch `orch-768` @ 97e35c5. Cause: `run` slept a flat 10 s after every tick whatever the tick took, and a sample needed `now - last >= 30` on the next tick, so gaps quantized to tick period (10 s + tick work). Fix (daemon.py): an anchored due moment (`_advance_load_due`: previous due + 30 s, a fresh period after a lag over 30 s), `run` sleeps `min(10 s, time to due)` (floor 0.5 s), a failed reading retries next tick; the spike ladder gates on the same due.\nNumbers (fake clock, reading 15 s, tick work"
+   },
+   {
+    "createdAt": "2026-10-10T16:11:36Z",
+    "body": "<!-- merge result -->\r\nMerge of orch-768 landed on main 26cf3ef456b7 after 0 s in line and a suite of 2.8 min, 0 failed. Result C:\\Coding\\poe-junkroan-v2\\var\\agentops\\results\\20261010T180828-merge-orch-768.json; suite output -.\r\n"
+   },
+   {
+    "createdAt": "2026-10-10T16:27:53Z",
+    "body": "**Closing (ORCH f50e4a1b).** Landed on `main` 26cf3ef (merge comment above: suite 2.8 min, 0 failed). Kind: loop fix, bug-specific test, 0 PoB.\n\n| row | number | command | commit |\n|---|---|---|---|\n| 1 | fake clock, reading 15 s, tick work 12 s, 10 min: before 17 lines (gaps ~37 s, the test fails on the base `daemon.py`), after >= 18 lines and no gap over 45 s; the file: 8 passed | `python -m pytest tests/test_runs_daemon_load_record.py -q` (the new test is `test_768_row1_a_slow_reading_keeps_a_line_every_30_s`) | main 26cf3ef |\n| 2 | not measured: the PC's daemon still runs the code of 16:35"
+   },
+   {
+    "createdAt": "2026-10-10T16:38:16Z",
+    "body": "Brain 18:39, live row 2 read: NOT MET on the merged code. The PC daemon restarted on 26cf3ef at 18:27:18 (`artifacts/runs/daemon-pc.err:19696`, adopting 4 running jobs). In the 10 min after it (18:27:18-18:37:18) `artifacts/runs/load_samples.jsonl` got 15 lines, not 18 or more: the first at 18:28:23 (65 s after the restart), the largest gap 69 s, 4 gaps over 45 s; the newest line was 4 s old at 18:37:43 (that half holds). On the old code the same hour gave 7 lines in 10 min (18:15-18:25, largest gap 92 s), so the fix moved it from 7 to 15, not to the row's number. The machine in that window: 7 of 7 PoB slots in use, and a whole-suite run from 18:36:32. Why a line still comes later than 45 s is not known (not read: how long one reading takes under this load, and whether one tick's work now exceeds 30 s). The ticket stays open on row 2: the next unit measures one reading's duration and the tick's duration on the live daemon first, then fixes; row 1's fake-clock test passed and does not show this."
+   },
+   {
+    "createdAt": "2026-10-10T16:38:34Z",
+    "body": "Brain 18:40: reopened on live row 2 (15 lines in 10 min against 18; numbers in the comment above). Ready: the first unit is the measurement named there."
+   },
+   {
+    "createdAt": "2026-10-10T17:23:14Z",
+    "body": "Checkpoint (ORCH 5.5 session, took over #768 at its reopen; the first ORCH f50e4a1b parked it). `orch-768` (97e35c5) is already on `main` (26cf3ef); this is a new round on the live row 2 (15 lines in 10 min, largest gap 69 s). Cause NOT known, so measure first. Cut:\n\n| unit | outcome | files it edits | its test | needs |\n|---|---|---|---|---|\n| 1 of 2 (measure) | numbers in a checkpoint: duration of one `_spike_reader` reading, of one whole tick, and which passes in the tick take the time, on the live PC daemon (read from `artifacts/runs/daemon-pc.err`, `load_samples.jsonl` and a timing probe "
+   }
+  ]
+ },
+ "772": {
+  "session": "6b41a37d",
+  "claimed": "2026-10-10T17:16:27Z",
+  "ended": "2026-10-10T17:35:31Z",
+  "comments": [
+   {
+    "createdAt": "2026-10-10T16:44:49Z",
+    "body": "Checkpoint 1 (ORCH f50e4a1b, claimed #772). The issue names its places (no researcher run). Cut into the two units it names:\n\n| unit | outcome | files it edits | its test | needs |\n|---|---|---|---|---|\n| 1 of 2 (one parser + re-check) | one function reads failed ids from pytest's last \"short test summary info\" only; every caller uses it (`full_run.py:268`, `merge.py:2006`, `:2465`, `:1935`, `line_check.py:412/426/419`); a re-check where pytest says \"not found\"/usage for an id drops that id and says so; no-output re-check keeps every id | `tools/agentops/merge.py`, `full_run.py`, `line_check.p"
+   },
+   {
+    "createdAt": "2026-10-10T17:14:10Z",
+    "body": "Checkpoint 2 (ORCH f50e4a1b): both units reported.\n- Unit 1 of 2 DONE (`worker`, branch `orch-772a` @ 61ecddb): `_failed_ids` reads only the text after the last \"short test summary info\" (a stub output with no such section is read whole); used by `_parse_pytest_failures`, the merge-suite red_ids line, `_recheck_failed` and `line_check.py` (both places); a re-check where pytest says not-found drops the id, names it in the output and re-runs the rest; empty re-check output keeps every id. `tests/test_agentops_failed_ids_772.py`: rows 1-4 = 4 passed (row 1: 1 id, the real test, was 2; row 2: 1 id"
+   },
+   {
+    "createdAt": "2026-10-10T17:15:09Z",
+    "body": "Checkpoint 3 (ORCH f50e4a1b, finishing at its context line, letting #772 go back to the pool unassigned and still `ready-for-agent`). State for the next session: both unit branches are committed and NOT merged: `orch-772a` @ 61ecddb (parser + re-check, rows 1-4 green) and `orch-772b` @ f2b3fa8 (flaky test file, no fixed sleep). Left to do: unit 3 of 3 (measure rows 5-7 on `orch-772b`: 20 runs alone, 20 beside 6 busy cores, file run time; the first needs the orphan loop below gone and the machine quieter), then merge both branches into one `orch-772` and send it through the merge command (`--issue 772`). If rows 5/6 stay red after the 300 s caps, trace why a wait takes over 120 s under load before changing anything else. Worktrees `C:\\Coding\\wt-orch-772a`, `wt-orch-772b` (never deleted; untracked `scratch772/` in the second is the orphan loop's output)."
+   },
+   {
+    "createdAt": "2026-10-10T17:23:35Z",
+    "body": "Checkpoint (ORCH 5.5 session, took over #772; f50e4a1b parked it at checkpoint 3). Orphan 20-run loop of unit 2 (bash 9660, 31608) stopped through `python -m tools.agentops stop 9660 31608` (the sanctioned form, both read \"stopped\"). Branches `orch-772a` 61ecddb (rows 1-4 green) and `orch-772b` f2b3fa8 (no fixed sleep) are committed, not merged. Remaining cut:\n\n| unit | outcome | files it edits | its test | needs |\n|---|---|---|---|---|\n| 3 of 3 (measure rows 5-7) | rows 5, 6, 7 numbers: 20 runs of the file alone, 20 runs beside 6 busy cores, file run time; if red, trace why a wait takes > 120"
+   },
+   {
+    "createdAt": "2026-10-10T17:27:39Z",
+    "body": "ORCH note: `orch-772` made (a + b merged, clean, tests only differ in 5 files); unit 3 (rows 5-7) waits for #775's measurement window to end."
+   }
+  ]
+ },
+ "775": {
+  "session": "6b41a37d",
+  "claimed": "2026-10-10T17:16:27Z",
+  "ended": "2026-10-10T17:35:39Z",
+  "comments": [
+   {
+    "createdAt": "2026-10-10T17:23:52Z",
+    "body": "Checkpoint (ORCH 5.5 session, claimed #775). The standing run (pid 37116) still stands at 0 % at 19:18 (`restart poll ... 0% done -> keep`). Cut:\n\n| unit | outcome | files it edits | its test | needs |\n|---|---|---|---|---|\n| 1 of 3 (measure, row 1) | the checkpoint numbers of row 1 and the named cause (priority starvation vs children waiting); first the 5-min Normal-priority probe of pid 37116's pytest tree, set back after; then the 20-longest-tests pair beside >= 5 calculating PoB workers | none (scratch only; stops 37116 only through `agentops stop`, after the first measurement) | the numbe"
+   }
+  ]
+ }
+}
