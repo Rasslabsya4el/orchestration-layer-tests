@@ -1,0 +1,121 @@
+[
+  {
+    "info": {
+      "id": "msg_fx_ok_user",
+      "sessionID": "ses_fx_healthy",
+      "role": "user",
+      "time": {"created": 1800000000000},
+      "agent": "agentops-research"
+    },
+    "parts": [
+      {"id": "prt_fx_ok_u1", "messageID": "msg_fx_ok_user", "sessionID": "ses_fx_healthy", "type": "text", "text": "Invented brief: how big is the invented cache."}
+    ]
+  },
+  {
+    "info": {
+      "id": "msg_fx_ok_a1",
+      "sessionID": "ses_fx_healthy",
+      "role": "assistant",
+      "parentID": "msg_fx_ok_user",
+      "time": {"created": 1800000004000, "completed": 1800000040000},
+      "modelID": "invented-model",
+      "providerID": "invented-provider",
+      "agent": "agentops-research",
+      "cost": 0,
+      "tokens": {"total": 1020, "input": 900, "output": 110, "reasoning": 10, "cache": {"read": 0, "write": 0}},
+      "finish": "tool-calls"
+    },
+    "parts": [
+      {"id": "prt_fx_ok_s1", "messageID": "msg_fx_ok_a1", "sessionID": "ses_fx_healthy", "type": "step-start", "snapshot": "fixture-snapshot-1"},
+      {"id": "prt_fx_ok_t1", "messageID": "msg_fx_ok_a1", "sessionID": "ses_fx_healthy", "type": "tool", "callID": "call_fx_ok_1", "tool": "webfetch",
+       "state": {"status": "completed", "input": {"url": "https://docs.example.org/guide-a", "format": "markdown"}, "output": "Invented guide text.", "title": "guide-a", "metadata": {}, "time": {"start": 1800000006000, "end": 1800000009000}}},
+      {"id": "prt_fx_ok_f1", "messageID": "msg_fx_ok_a1", "sessionID": "ses_fx_healthy", "type": "step-finish", "reason": "tool-calls", "snapshot": "fixture-snapshot-1", "cost": 0, "tokens": {"total": 1020, "input": 900, "output": 110, "reasoning": 10, "cache": {"read": 0, "write": 0}}}
+    ]
+  },
+  {
+    "info": {
+      "id": "msg_fx_ok_a2",
+      "sessionID": "ses_fx_healthy",
+      "role": "assistant",
+      "parentID": "msg_fx_ok_user",
+      "time": {"created": 1800000045000, "completed": 1800000080000},
+      "modelID": "invented-model",
+      "providerID": "invented-provider",
+      "agent": "agentops-research",
+      "cost": 0,
+      "tokens": {"total": 1150, "input": 1000, "output": 90, "reasoning": 60, "cache": {"read": 0, "write": 0}},
+      "finish": "tool-calls"
+    },
+    "parts": [
+      {"id": "prt_fx_ok_s2", "messageID": "msg_fx_ok_a2", "sessionID": "ses_fx_healthy", "type": "step-start", "snapshot": "fixture-snapshot-2"},
+      {"id": "prt_fx_ok_x2", "messageID": "msg_fx_ok_a2", "sessionID": "ses_fx_healthy", "type": "text", "text": "Invented note A: the guide says the cache keeps 4 items.", "time": {"start": 1800000046000, "end": 1800000050000}},
+      {"id": "prt_fx_ok_t2", "messageID": "msg_fx_ok_a2", "sessionID": "ses_fx_healthy", "type": "tool", "callID": "call_fx_ok_2", "tool": "webfetch",
+       "state": {"status": "completed", "input": {"url": "https://docs.example.org/guide-a", "format": "markdown"}, "output": "Invented guide text again.", "title": "guide-a", "metadata": {}, "time": {"start": 1800000051000, "end": 1800000054000}}},
+      {"id": "prt_fx_ok_f2", "messageID": "msg_fx_ok_a2", "sessionID": "ses_fx_healthy", "type": "step-finish", "reason": "tool-calls", "snapshot": "fixture-snapshot-2", "cost": 0, "tokens": {"total": 1150, "input": 1000, "output": 90, "reasoning": 60, "cache": {"read": 0, "write": 0}}}
+    ]
+  },
+  {
+    "info": {
+      "id": "msg_fx_ok_a3",
+      "sessionID": "ses_fx_healthy",
+      "role": "assistant",
+      "parentID": "msg_fx_ok_user",
+      "time": {"created": 1800000085000, "completed": 1800000130000},
+      "modelID": "invented-model",
+      "providerID": "invented-provider",
+      "agent": "agentops-research",
+      "cost": 0,
+      "tokens": {"total": 1300, "input": 1150, "output": 100, "reasoning": 50, "cache": {"read": 0, "write": 0}},
+      "finish": "tool-calls"
+    },
+    "parts": [
+      {"id": "prt_fx_ok_s3", "messageID": "msg_fx_ok_a3", "sessionID": "ses_fx_healthy", "type": "step-start", "snapshot": "fixture-snapshot-3"},
+      {"id": "prt_fx_ok_t3", "messageID": "msg_fx_ok_a3", "sessionID": "ses_fx_healthy", "type": "tool", "callID": "call_fx_ok_3", "tool": "webfetch",
+       "state": {"status": "completed", "input": {"url": "https://blog.example.com/post-b", "format": "markdown"}, "output": "Invented post text.", "title": "post-b", "metadata": {}, "time": {"start": 1800000086000, "end": 1800000090000}}},
+      {"id": "prt_fx_ok_f3", "messageID": "msg_fx_ok_a3", "sessionID": "ses_fx_healthy", "type": "step-finish", "reason": "tool-calls", "snapshot": "fixture-snapshot-3", "cost": 0, "tokens": {"total": 1300, "input": 1150, "output": 100, "reasoning": 50, "cache": {"read": 0, "write": 0}}}
+    ]
+  },
+  {
+    "info": {
+      "id": "msg_fx_ok_a4",
+      "sessionID": "ses_fx_healthy",
+      "role": "assistant",
+      "parentID": "msg_fx_ok_user",
+      "time": {"created": 1800000135000, "completed": 1800000180000},
+      "modelID": "invented-model",
+      "providerID": "invented-provider",
+      "agent": "agentops-research",
+      "cost": 0,
+      "tokens": {"total": 1400, "input": 1250, "output": 100, "reasoning": 50, "cache": {"read": 0, "write": 0}},
+      "finish": "tool-calls"
+    },
+    "parts": [
+      {"id": "prt_fx_ok_s4", "messageID": "msg_fx_ok_a4", "sessionID": "ses_fx_healthy", "type": "step-start", "snapshot": "fixture-snapshot-4"},
+      {"id": "prt_fx_ok_w4", "messageID": "msg_fx_ok_a4", "sessionID": "ses_fx_healthy", "type": "tool", "callID": "call_fx_ok_4", "tool": "websearch",
+       "state": {"status": "completed", "input": {"query": "invented tool cache size"}, "output": "Invented search results.", "title": "", "metadata": {"provider": "invented"}, "time": {"start": 1800000137000, "end": 1800000140000}}},
+      {"id": "prt_fx_ok_f4", "messageID": "msg_fx_ok_a4", "sessionID": "ses_fx_healthy", "type": "step-finish", "reason": "tool-calls", "snapshot": "fixture-snapshot-4", "cost": 0, "tokens": {"total": 1400, "input": 1250, "output": 100, "reasoning": 50, "cache": {"read": 0, "write": 0}}}
+    ]
+  },
+  {
+    "info": {
+      "id": "msg_fx_ok_a5",
+      "sessionID": "ses_fx_healthy",
+      "role": "assistant",
+      "parentID": "msg_fx_ok_user",
+      "time": {"created": 1800000185000, "completed": 1800000230000},
+      "modelID": "invented-model",
+      "providerID": "invented-provider",
+      "agent": "agentops-research",
+      "cost": 0,
+      "tokens": {"total": 1500, "input": 1300, "output": 150, "reasoning": 50, "cache": {"read": 0, "write": 0}},
+      "finish": "stop"
+    },
+    "parts": [
+      {"id": "prt_fx_ok_s5", "messageID": "msg_fx_ok_a5", "sessionID": "ses_fx_healthy", "type": "step-start", "snapshot": "fixture-snapshot-5"},
+      {"id": "prt_fx_ok_t5", "messageID": "msg_fx_ok_a5", "sessionID": "ses_fx_healthy", "type": "tool", "callID": "call_fx_ok_5", "tool": "webfetch",
+       "state": {"status": "completed", "input": {"url": "https://forum.example.net/thread/7", "format": "markdown"}, "output": "Invented thread text.", "title": "thread-7", "metadata": {}, "time": {"start": 1800000186000, "end": 1800000190000}}},
+      {"id": "prt_fx_ok_x5", "messageID": "msg_fx_ok_a5", "sessionID": "ses_fx_healthy", "type": "text", "text": "Invented final report: the cache holds 4 items (guide-a), a blog post agrees (post-b), and a forum thread gives the same number (thread-7).", "time": {"start": 1800000225000, "end": 1800000230000}},
+      {"id": "prt_fx_ok_f5", "messageID": "msg_fx_ok_a5", "sessionID": "ses_fx_healthy", "type": "step-finish", "reason": "stop", "snapshot": "fixture-snapshot-5", "cost": 0, "tokens": {"total": 1500, "input": 1300, "output": 150, "reasoning": 50, "cache": {"read": 0, "write": 0}}}
+    ]
+  }
+]
