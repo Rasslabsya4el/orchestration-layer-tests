@@ -1,0 +1,88 @@
+{
+  "repo": "Rasslabsya4el/orchestration-layer",
+  "github_suite": true,
+  "test_copy_remote": "https://github.com/Rasslabsya4el/orchestration-layer-tests.git",
+  "github_start_seconds_windows": 26,
+  "github_start_seconds_linux": 16,
+  "brain_chat_title": "Brain: orch layer",
+  "context_line": 150000,
+  "orch_offer_max": 4,
+  "core_hold_max_min": 60,
+  "merge_trace_grace_min": 15,
+  "claude_projects_dir": "C--Coding-orchestration-layer",
+  "bridge_dir": "C:\\Coding\\orchestration-layer\\var\\agentops",
+  "bridge_lock": "var/locks/bridge.lock",
+  "local_modules": [
+    ".autopilot",
+    ".provisional",
+    ".mods",
+    ".skill_counter"
+  ],
+  "home": "Rasslabsya4el/orchestration-layer",
+  "core_version": "9fc1855fcb3ac54d2b8633634608ab80727e7ae9",
+  "update_rule": "home",
+  "areas": [],
+  "mirror_repos": [
+    "Rasslabsya4el/orch-it"
+  ],
+  "code_issue_area": "",
+  "context_hard_line": 400000,
+  "context_ceiling": 200000,
+  "loss_ceiling_usd_per_closed": 5.5,
+  "limit_usd_per_pct": 16.5,
+  "merge_select_tests": true,
+  "merge_suite_quiet_limit": 900,
+  "merge_suite_total_limit": 9360,
+  "map_build_bound_minutes": 120,
+  "map_build_min_interval_minutes": 30,
+  "targets": [
+    {
+      "repo": "Rasslabsya4el/Poe-Junkroan",
+      "folder": "C:/Coding/poe-junkroan-v2"
+    },
+    {
+      "repo": "Rasslabsya4el/Hermes-finances-agent",
+      "folder": "C:/Coding/Hermes finances agent"
+    }
+  ],
+  "merge_suite": "python -m pytest tests -q -p no:faulthandler -m \"not slow and not live\"",
+  "mod_test_runner": "tools.agentops.mods:run_test",
+  "test_copy_exclude": [
+    "docs/STATE.md",
+    "docs/adr/0109-the-orchestration-core-is-split-from-local-extensions-in-its-home.md",
+    "docs/adr/0118-the-orchestration-core-moves-to-a-home-of-its-own-and-the-home-pushes-every-fix.md",
+    "docs/adr/0119-merge-tests-run-on-github-machines-from-public-test-copies.md",
+    "mods/ticket-links/hooks/repos.ts",
+    "scripts/comment_tasks_extract.py",
+    "scripts/counts/126/extract.py",
+    "scripts/counts/148/core_update_rate_limit.py",
+    "scripts/owner_anger_extract.py",
+    "tests/test_comment_tasks_extract.py",
+    "tests/test_issue148_count_script.py",
+    "tests/test_owner_anger_extract.py"
+  ],
+  "monitor": {
+    "addon_aliases": {
+      "keys": {
+        "laptop": "remote",
+        "slots": "lanes",
+        "slots_total": "lanes_total",
+        "slots_in_use": "lanes_in_use"
+      },
+      "kinds": {
+        "slots": "lanes"
+      },
+      "titles": {
+        "remote": "Laptop"
+      }
+    },
+    "source": "pob-slots",
+    "plugin_id": "orch-monitor",
+    "refresh_s": 2,
+    "agents_every_s": 20,
+    "snapshot_every_s": 120,
+    "snapshot_keep_h": 24,
+    "snapshot_window_title": "Claude",
+    "side_thread_idle_drop_s": 600
+  }
+}

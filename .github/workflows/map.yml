@@ -1,0 +1,44 @@
+name: map
+
+# #343 unit 3: the test map is built on a GitHub machine, the PC takes the artifact `test-map` (testmondata, reads/,
+# meta.json). A red build still uploads its meta.json (green: false), so the PC learns the result.
+
+on:
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: "git ref to build the test map of"
+        type: string
+        default: "main"
+
+jobs:
+  map:
+    runs-on: ubuntu-latest
+    # 150 min, not the build's map_build_bound_minutes (120): the bound stops the build first; runner start and the
+    # upload of the artifact come on top of it, so the job's own limit sits above the bound.
+    timeout-minutes: 150
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.ref }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pytest pytest-xdist pytest-testmon psutil pyyaml
+      - run: python -m pytest --version
+      - name: git identity
+        run: |
+          git config --global user.name ci
+          git config --global user.email ci@example.invalid
+          git config --global init.defaultBranch main
+      - name: map build
+        env:
+          MAP_OUT: ${{ runner.temp }}/test-map
+        run: python scripts/ci_map_build.py --root . --out "$MAP_OUT"
+      - name: test-map
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-map
+          path: ${{ runner.temp }}/test-map/
+          if-no-files-found: error
