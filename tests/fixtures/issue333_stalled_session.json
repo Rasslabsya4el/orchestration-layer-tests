@@ -1,0 +1,77 @@
+[
+  {
+    "info": {
+      "id": "msg_fx_stall_user",
+      "sessionID": "ses_fx_stall",
+      "role": "user",
+      "time": {"created": 1800000000000},
+      "agent": "agentops-research"
+    },
+    "parts": [
+      {"id": "prt_fx_stall_u1", "messageID": "msg_fx_stall_user", "sessionID": "ses_fx_stall", "type": "text", "text": "Invented brief: compare two invented tools."}
+    ]
+  },
+  {
+    "info": {
+      "id": "msg_fx_stall_a1",
+      "sessionID": "ses_fx_stall",
+      "role": "assistant",
+      "parentID": "msg_fx_stall_user",
+      "time": {"created": 1800000005000, "completed": 1800000060000},
+      "modelID": "invented-model",
+      "providerID": "invented-provider",
+      "agent": "agentops-research",
+      "cost": 0,
+      "tokens": {"total": 1030, "input": 900, "output": 120, "reasoning": 10, "cache": {"read": 0, "write": 0}},
+      "finish": "tool-calls"
+    },
+    "parts": [
+      {"id": "prt_fx_stall_s1", "messageID": "msg_fx_stall_a1", "sessionID": "ses_fx_stall", "type": "step-start", "snapshot": "fixture-snapshot-1"},
+      {"id": "prt_fx_stall_t1", "messageID": "msg_fx_stall_a1", "sessionID": "ses_fx_stall", "type": "tool", "callID": "call_fx_stall_1", "tool": "webfetch",
+       "state": {"status": "completed", "input": {"url": "https://docs.example.org/first-page", "format": "markdown"}, "output": "Invented page text.", "title": "first-page", "metadata": {}, "time": {"start": 1800000006000, "end": 1800000009000}}},
+      {"id": "prt_fx_stall_f1", "messageID": "msg_fx_stall_a1", "sessionID": "ses_fx_stall", "type": "step-finish", "reason": "tool-calls", "snapshot": "fixture-snapshot-1", "cost": 0, "tokens": {"total": 1030, "input": 900, "output": 120, "reasoning": 10, "cache": {"read": 0, "write": 0}}}
+    ]
+  },
+  {
+    "info": {
+      "id": "msg_fx_stall_a2",
+      "sessionID": "ses_fx_stall",
+      "role": "assistant",
+      "parentID": "msg_fx_stall_user",
+      "time": {"created": 1800000070000, "completed": 1800000120000},
+      "modelID": "invented-model",
+      "providerID": "invented-provider",
+      "agent": "agentops-research",
+      "cost": 0,
+      "tokens": {"total": 1210, "input": 1100, "output": 80, "reasoning": 30, "cache": {"read": 0, "write": 0}},
+      "finish": "tool-calls"
+    },
+    "parts": [
+      {"id": "prt_fx_stall_s2", "messageID": "msg_fx_stall_a2", "sessionID": "ses_fx_stall", "type": "step-start", "snapshot": "fixture-snapshot-2"},
+      {"id": "prt_fx_stall_x2", "messageID": "msg_fx_stall_a2", "sessionID": "ses_fx_stall", "type": "text", "text": "Partial report chunk one: the invented first tool keeps its notes in plain files. Source: https://docs.example.org/first-page (invented).", "time": {"start": 1800000071000, "end": 1800000080000}},
+      {"id": "prt_fx_stall_t2", "messageID": "msg_fx_stall_a2", "sessionID": "ses_fx_stall", "type": "tool", "callID": "call_fx_stall_2", "tool": "webfetch",
+       "state": {"status": "completed", "input": {"url": "https://forum.example.net/thread/42", "format": "markdown"}, "output": "Invented thread text.", "title": "thread-42", "metadata": {}, "time": {"start": 1800000081000, "end": 1800000090000}}},
+      {"id": "prt_fx_stall_f2", "messageID": "msg_fx_stall_a2", "sessionID": "ses_fx_stall", "type": "step-finish", "reason": "tool-calls", "snapshot": "fixture-snapshot-2", "cost": 0, "tokens": {"total": 1210, "input": 1100, "output": 80, "reasoning": 30, "cache": {"read": 0, "write": 0}}}
+    ]
+  },
+  {
+    "info": {
+      "id": "msg_fx_stall_a3",
+      "sessionID": "ses_fx_stall",
+      "role": "assistant",
+      "parentID": "msg_fx_stall_user",
+      "time": {"created": 1800000125000},
+      "modelID": "invented-model",
+      "providerID": "invented-provider",
+      "agent": "agentops-research",
+      "cost": 0,
+      "tokens": {"total": 0, "input": 0, "output": 0, "reasoning": 0, "cache": {"read": 0, "write": 0}}
+    },
+    "parts": [
+      {"id": "prt_fx_stall_s3", "messageID": "msg_fx_stall_a3", "sessionID": "ses_fx_stall", "type": "step-start", "snapshot": "fixture-snapshot-3"},
+      {"id": "prt_fx_stall_x3", "messageID": "msg_fx_stall_a3", "sessionID": "ses_fx_stall", "type": "text", "text": "Partial report chunk two: the invented forum thread says the second tool needs an invented token. Source: https://forum.example.net/thread/42 (invented).", "time": {"start": 1800000126000, "end": 1800000130000}},
+      {"id": "prt_fx_stall_t3", "messageID": "msg_fx_stall_a3", "sessionID": "ses_fx_stall", "type": "tool", "callID": "call_fx_stall_3", "tool": "websearch",
+       "state": {"status": "completed", "input": {"query": "invented second tool token"}, "output": "Invented search results.", "title": "", "metadata": {"provider": "invented"}, "time": {"start": 1800000131000, "end": 1800000133000}}}
+    ]
+  }
+]
