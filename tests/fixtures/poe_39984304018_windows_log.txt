@@ -1,0 +1,293 @@
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9890098Z             cwd=str(ROOT), capture_output=True, text=True, encoding="utf-8", errors="replace", timeout=300,
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9890416Z         )
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9890554Z         out = run.stdout + run.stderr
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9890753Z >       assert run.returncode == 0, out[-3000:]
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9891137Z E       AssertionError: tests/test_pane_dump.py::test_current_worktree_123_columns_has_three_cards_and_a_picture
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9891600Z E         tests/test_pane_dump.py::test_open_square_press_of_a_seed_cell_draws_the_build_block
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9891969Z E         tests/test_pane_dump.py::test_baseline_ref_dumps_a_nonempty_tree
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9892031Z E         
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9892129Z E         =================================== ERRORS ====================================
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9892284Z E         ____________ ERROR collecting mods/pob-slots/bin/test_cost_cut.py _____________
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9892575Z E         ImportError while importing test module 'D:\a\Poe-Junkroan-tests\Poe-Junkroan-tests\mods\pob-slots\bin\test_cost_cut.py'.
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9892708Z E         Hint: make sure your test modules/packages have valid Python names.
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9892770Z E         Traceback:
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9892963Z E         C:\hostedtoolcache\windows\Python\3.12.10\x64\Lib\importlib\__init__.py:90: in import_module
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9893091Z E             return _bootstrap._gcd_import(name[level:], package, level)
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9893171Z E                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9893269Z E         mods\pob-slots\bin\test_cost_cut.py:12: in <module>
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9893356Z E             import token_meter as tm  # noqa: E402
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9893495Z E             ^^^^^^^^^^^^^^^^^^^^^^^^
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9893606Z E         E   ModuleNotFoundError: No module named 'token_meter'
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9893716Z E         =========================== short test summary info ===========================
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9893797Z E         ERROR mods/pob-slots/bin/test_cost_cut.py
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9893930Z E         !!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9894001Z E         3 tests collected, 1 error in 0.67s
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9894057Z E         
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9894109Z E       assert 2 == 0
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9894680Z E        +  where 2 = CompletedProcess(args=['C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\python.exe', '-m', 'pytest', 'tests/test_p...!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\n3 tests collected, 1 error in 0.67s\n", stderr='').returncode
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9894686Z 
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9894798Z tests\test_issue973_mixed_selection.py:26: AssertionError
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9894901Z ============================== warnings summary ===============================
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9894978Z tests\test_issue958_keep_list.py:33
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9895252Z   D:\a\Poe-Junkroan-tests\Poe-Junkroan-tests\tests\test_issue958_keep_list.py:33: SyntaxWarning: invalid escape sequence '\{'
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9895483Z     live = [Proc(7000 + i, 1, name, f"C:\Program Files\X\{name}", rows.CONSOLE, rows.USER)
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9895488Z 
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9895556Z tests\test_issue958_keep_list.py:33
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9895816Z   D:\a\Poe-Junkroan-tests\Poe-Junkroan-tests\tests\test_issue958_keep_list.py:33: SyntaxWarning: invalid escape sequence '\P'
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9895962Z     live = [Proc(7000 + i, 1, name, f"C:\Program Files\X\{name}", rows.CONSOLE, rows.USER)
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9895966Z 
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9896091Z tests/test_pane_points.py::test_six_points_at_known_coordinates
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9896233Z tests/test_pane_points.py::test_shift_moves_points_by_the_same_amount
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9896363Z tests/test_pane_points.py::test_shift_moves_points_by_the_same_amount
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9896460Z tests/test_pane_points.py::test_no_pane_returns_empty
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9896624Z tests/test_pane_points.py::test_title_point_skips_status_dot_and_flags_placeholder
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9897126Z   D:\a\Poe-Junkroan-tests\Poe-Junkroan-tests\scripts\pane_points.py:62: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9897275Z     return list(mask.resize((im.width, 1), Image.Resampling.BOX).getdata())
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9897281Z 
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9897542Z -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9897643Z =========================== short test summary info ===========================
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9899235Z FAILED tests/test_benchmark_sets.py::test_sets_name_fixtures_that_exist_and_partition_them - FileNotFoundError: no fixture z326_elementalist_wave_of_conviction.pob.txt in ['D:\\a\\Poe-Junkroan-tests\\Poe-Junkroan-tests\\tests\\fixtures\\tuadh_329', 'D:\\a\\Poe-Junkroan-tests\\Poe-Junkroan-tests\\tests\\fixtures\\zizaran_329\\early', 'D:\\a\\Poe-Junkroan-tests\\Poe-Junkroan-tests\\tests\\fixtures\\zizaran_328\\early', 'D:\\a\\Poe-Junkroan-tests\\Poe-Junkroan-tests\\tests\\fixtures\\zizaran_327\\early', 'D:\\a\\Poe-Junkroan-tests\\Poe-Junkroan-tests\\tests\\fixtures\\zizaran_326\\early', 'D:\\a\\Poe-Junkroan-tests\\Poe-Junkroan-tests\\tests\\fixtures\\zizaran_325\\early']
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9899642Z FAILED tests/test_benchmark_sets.py::test_a_slug_is_looked_up_in_the_tuadh_folder_first - AssertionError: assert {'absolution_...w_snipe', ...} == {'absolution_...w_snipe', ...}
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9899722Z   
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9899794Z   Extra items in the right set:
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9899862Z   'z327_necromancer_raise_spectre'
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9899941Z   'z326_elementalist_wave_of_conviction'
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9900076Z   
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9900126Z   Full diff:
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9900180Z     {
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9900241Z         'absolution_minions',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9900304Z         'arc_archmage',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9900369Z         'archmage_volatile_dead',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9900438Z         'bleed_bow',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9900502Z         'bleed_perforate',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9900563Z         'burning_arrow_snipe',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9900624Z         'cold_dot',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9900680Z         'elemental_hit',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9900743Z         'exsanguinate_mines',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9900801Z         'hit_penance_brand',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9900870Z         'ignite_penance_brand',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9900928Z         'impale_ballista',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9900993Z         'impale_cyclone',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9901276Z         'kinetic_bolt_wander',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9901371Z         'kinetic_fusillade',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9901439Z         'lightning_trap',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9901495Z         'physical_dot',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9901561Z         'poison_spark',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9901623Z         'poison_spectral_throw',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9901684Z         'pyroclast_mine',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9901751Z         'regular_viper_strike',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9901897Z         'shockwave_cyclone',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9901963Z         'smite',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9902021Z         'soulrend_chaos_dot',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9902083Z         'spark',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9902146Z         'spectral_shield_throw',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9902209Z         'static_strike',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9902264Z         'stormbrand',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9902332Z         'summon_raging_spirits',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9902389Z         'toxic_rain',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9902449Z         'vd_spellslinger',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9902506Z         'winter_orb',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9902580Z         'z325_berserker_ground_slam_autocry',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9902659Z         'z325_champion_explosive_arrow',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9902736Z         'z325_gladiator_eviscerate_retaliate',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9902809Z         'z325_gladiator_lacerate',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9902894Z         'z325_gladiator_spectral_shield_throw',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9902964Z         'z325_hierophant_ice_nova_archmage',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9903029Z         'z325_slayer_ground_slam',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9903096Z         'z326_berserker_volcanic_fissure',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9903169Z         'z326_chieftain_righteous_fire',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9903240Z         'z326_elementalist_lightning_conduit',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9903321Z   -     'z326_elementalist_wave_of_conviction',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9903388Z         'z326_gladiator_earthquake',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9903458Z         'z326_necromancer_zombie_army_early',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9903533Z         'z326_trickster_blight_of_contagion',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9903601Z         'z327_assassin_poison_spark',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9903674Z         'z327_champion_explosive_arrow',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9903741Z         'z327_elementalist_lightning_conduit',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9903809Z         'z327_gladiator_earthquake',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9903874Z         'z327_hierophant_storm_burst',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9903942Z         'z327_juggernaut_boneshatter',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9904016Z   -     'z327_necromancer_raise_spectre',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9904078Z         'z327_slayer_earthshatter',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9904146Z         'z328_champion_explosive_arrow',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9904214Z         'z328_hierophant_kinetic_fusillade',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9904287Z         'z328_hierophant_shock_nova_archmage',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9904348Z         'z328_juggernaut_boneshatter',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9904418Z         'z329_champion_explosive_arrow',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9904486Z         'z329_elementalist_winter_orb',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9904564Z         'z329_gladiator_earthquake',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9904626Z         'z329_juggernaut_boneshatter',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9904775Z         'z329_occultist_essence_drain',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9904822Z     }
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9905090Z FAILED tests/test_core_check_monitor_exempt.py::test_literal_stripped_only_under_monitor_prefixes - assert (not True)
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9905336Z FAILED tests/test_core_check_monitor_exempt.py::test_monitor_l2_only_slot_word_is_exempt - AssertionError: keymaster
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9905398Z assert True is False
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9905611Z FAILED tests/test_core_check_monitor_exempt.py::test_check_file_signature_unchanged - KeyError: 'L2'
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9905902Z FAILED tests/test_core_check_monitor_exempt.py::test_manifest_lists_monitor_paths_but_not_other_lines_with_the_literal - KeyError: 'L1'
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9906391Z FAILED tests/test_extract_loadout.py::test_every_league_folder_is_covered_and_a_build_without_an_early_loadout_is_skipped - AssertionError: assert {'berserker_v...y_early', ...} == {'berserker_v...of_contagion'}
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9906452Z   
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9906516Z   Extra items in the left set:
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9906590Z   'elementalist_wave_of_conviction'
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9906638Z   
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9906698Z   Full diff:
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9906746Z     {
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9906822Z         'berserker_volcanic_fissure',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9906976Z         'chieftain_righteous_fire',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9907046Z         'elementalist_lightning_conduit',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9907122Z   +     'elementalist_wave_of_conviction',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9907187Z         'gladiator_earthquake',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9907262Z         'necromancer_zombie_army_early',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9907328Z         'trickster_blight_of_contagion',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9907379Z     }
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9907649Z FAILED tests/test_issue1015_permanent_minion_mana.py::test_row1_the_marker_is_in_pobs_skill_data - KeyError: 'RaiseZombie'
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9908043Z FAILED tests/test_issue1023_vaal_aura_level.py::test_a_vaal_reservation_aura_is_listed_under_its_own_name_and_keeps_its_saved_level - AssertionError: assert [] == ['Vaal Clarity']
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9908100Z   
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9908180Z   Right contains one more item: 'Vaal Clarity'
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9908234Z   
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9908282Z   Full diff:
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9908338Z   + []
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9908395Z   - [
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9908459Z   -     'Vaal Clarity',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9908512Z   - ]
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9908855Z FAILED tests/test_issue1023_vaal_aura_level.py::test_a_vaal_aura_at_the_rail_level_is_written_at_the_rail_as_before - AssertionError: assert [] == ['Vaal Clarity']
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9908910Z   
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9908980Z   Right contains one more item: 'Vaal Clarity'
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9909036Z   
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9909083Z   Full diff:
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9909137Z   + []
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9909190Z   - [
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9909244Z   -     'Vaal Clarity',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9909295Z   - ]
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9909560Z FAILED tests/test_issue1023_vaal_aura_level.py::test_row2_a_plain_aura_is_unchanged - AssertionError: assert [] == ['Vitality']
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9909615Z   
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9909684Z   Right contains one more item: 'Vitality'
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9909740Z   
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9909795Z   Full diff:
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9909844Z   + []
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9909896Z   - [
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9909946Z   -     'Vitality',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9910000Z   - ]
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9910590Z FAILED tests/test_issue1030_keystone_flip.py::test_chaos_inoculation_on_spark_smoke - FileNotFoundError: [Errno 2] No such file or directory: 'D:\\a\\Poe-Junkroan-tests\\Poe-Junkroan-tests\\artifacts\\benchmark\\20261013-0101-P2-core-3\\spark-s4.pob.txt'
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9910876Z FAILED tests/test_issue1121_losses_cli.py::test_the_home_settings_name_this_repo_and_one_sibling - AssertionError: assert (1 == 2)
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9910952Z  +  where 1 = len(['poe-junkroan-v2'])
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9911510Z FAILED tests/test_issue1123_stand.py::test_spark_stand_two_fixture_records_move_pob_numbers - FileNotFoundError: no weekly core run folder in D:\a\Poe-Junkroan-tests\Poe-Junkroan-tests\artifacts\benchmark
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9912260Z FAILED tests/test_issue1157_asc_audit.py::test_the_audit_flags_unhallowed_rite_on_A1_and_instruments_of_virtue_on_B1 - FileNotFoundError: [Errno 2] No such file or directory: 'D:\\a\\Poe-Junkroan-tests\\Poe-Junkroan-tests\\artifacts\\search-contagion\\20261015-0336\\01 witch_occultist_no_iron_will_prophecy_wand.pob.txt'
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9913009Z FAILED tests/test_issue1158_dead_implicit.py::test_the_audit_flags_the_void_sceptre_implicit_on_A2_and_passes_the_prophecy_wand_on_A1 - FileNotFoundError: [Errno 2] No such file or directory: 'D:\\a\\Poe-Junkroan-tests\\Poe-Junkroan-tests\\artifacts\\search-contagion\\20261015-0336\\02 witch_occultist_void_sceptre.pob.txt'
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9913223Z FAILED tests/test_issue1162_flask_craft.py::test_output_counts_the_active_utility_flask - assert 0 == 1
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9913701Z FAILED tests/test_issue1176_home_guard.py::test_mod_install_writes_only_under_the_tmp_home - AssertionError: the owner's real settings file C:\runner-home\.claude\settings.json is absent: nothing to stat
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9913760Z assert None is not None
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9914518Z FAILED tests/test_issue1205_catalog_standin.py::test_standin_is_committed_under_50_mib_and_mapped_in_settings - FileNotFoundError: [WinError 3] The system cannot find the path specified: 'D:\\a\\Poe-Junkroan-tests\\Poe-Junkroan-tests\\tests\\fixtures\\standins\\poedb_affix_catalog.json'
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9915117Z FAILED tests/test_issue1205_catalog_standin.py::test_standin_gives_the_same_templates_as_the_real_catalog - FileNotFoundError: [Errno 2] No such file or directory: 'D:\\a\\Poe-Junkroan-tests\\Poe-Junkroan-tests\\tests\\fixtures\\standins\\poedb_affix_catalog.json'
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9915656Z FAILED tests/test_issue1205_catalog_standin.py::test_standin_is_what_the_script_writes - FileNotFoundError: [Errno 2] No such file or directory: 'D:\\a\\Poe-Junkroan-tests\\Poe-Junkroan-tests\\tests\\fixtures\\standins\\poedb_affix_catalog.json'
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9915959Z FAILED tests/test_issue232_shard.py::test_four_shards_partition_the_ten_ids - AssertionError: assert [] == ['tests/test_...test_05', ...]
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9916016Z   
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9916164Z   Right contains 10 more items, first extra item: 'tests/test_x.py::test_00'
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9916221Z   
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9916270Z   Full diff:
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9916326Z   + []
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9916380Z   - [
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9916447Z   -     'tests/test_x.py::test_00',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9916516Z   -     'tests/test_x.py::test_01',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9916577Z   -     'tests/test_x.py::test_02',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9916642Z   -     'tests/test_x.py::test_03',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9916700Z   -     'tests/test_x.py::test_04',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9916769Z   -     'tests/test_x.py::test_05',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9916836Z   -     'tests/test_x.py::test_06',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9916895Z   -     'tests/test_x.py::test_07',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9916962Z   -     'tests/test_x.py::test_08',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9917021Z   -     'tests/test_x.py::test_09',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9917075Z   - ]
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9917390Z FAILED tests/test_issue232_shard.py::test_shards_take_positions_of_the_sorted_list - AssertionError: assert [] == ['tests/test_....py::test_08']
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9917447Z   
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9917591Z   Right contains 3 more items, first extra item: 'tests/test_x.py::test_00'
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9917637Z   
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9917692Z   Full diff:
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9917740Z   + []
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9917794Z   - [
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9917856Z   -     'tests/test_x.py::test_00',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9917923Z   -     'tests/test_x.py::test_04',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9917989Z   -     'tests/test_x.py::test_08',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9918038Z   - ]
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9918388Z FAILED tests/test_issue232_shard.py::test_unset_keeps_everything - AssertionError: assert [] == ['tests/test_...test_01', ...]
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9918437Z   
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9918582Z   Right contains 10 more items, first extra item: 'tests/test_x.py::test_07'
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9918631Z   
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9918696Z   Full diff:
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9918749Z   + []
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9918795Z   - [
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9918863Z   -     'tests/test_x.py::test_07',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9918922Z   -     'tests/test_x.py::test_02',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9918989Z   -     'tests/test_x.py::test_09',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9919047Z   -     'tests/test_x.py::test_00',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9919113Z   -     'tests/test_x.py::test_05',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9919176Z   -     'tests/test_x.py::test_01',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9919234Z   -     'tests/test_x.py::test_08',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9919299Z   -     'tests/test_x.py::test_03',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9919357Z   -     'tests/test_x.py::test_06',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9919426Z   -     'tests/test_x.py::test_04',
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9919473Z   - ]
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9919693Z FAILED tests/test_issue232_shard.py::test_malformed_value_raises[] - Failed: DID NOT RAISE UsageError
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9919909Z FAILED tests/test_issue232_shard.py::test_malformed_value_raises[0/5] - Failed: DID NOT RAISE UsageError
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9921054Z FAILED tests/test_issue232_shard.py::test_malformed_value_raises[6/5] - Failed: DID NOT RAISE UsageError
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9921547Z FAILED tests/test_issue232_shard.py::test_malformed_value_raises[2] - Failed: DID NOT RAISE UsageError
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9921762Z FAILED tests/test_issue232_shard.py::test_malformed_value_raises[a/b] - Failed: DID NOT RAISE UsageError
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9921970Z FAILED tests/test_issue232_shard.py::test_malformed_value_raises[1/0] - Failed: DID NOT RAISE UsageError
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9922183Z FAILED tests/test_issue232_shard.py::test_malformed_value_raises[-1/5] - Failed: DID NOT RAISE UsageError
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9922394Z FAILED tests/test_issue232_shard.py::test_malformed_value_raises[2/-3] - Failed: DID NOT RAISE UsageError
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9922610Z FAILED tests/test_issue232_shard.py::test_malformed_value_raises[1/2/3] - Failed: DID NOT RAISE UsageError
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9922816Z FAILED tests/test_issue232_shard.py::test_malformed_value_raises[1.5/5] - Failed: DID NOT RAISE UsageError
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9923027Z FAILED tests/test_issue232_shard.py::test_malformed_value_raises[1/] - Failed: DID NOT RAISE UsageError
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9923212Z FAILED tests/test_issue553_floor_errors.py::test_gate_rows_end_feasible - assert (0 == 61)
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9923272Z  +  where 0 = len([])
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9923489Z FAILED tests/test_issue616_flask_duplicate_base.py::test_row5_three_ruby_flasks_count_two - assert 0 == 2
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9924091Z FAILED tests/test_issue619_bench_report.py::test_seeds_one_report_equals_old_rendering - FileNotFoundError: [Errno 2] No such file or directory: 'D:\\a\\Poe-Junkroan-tests\\Poe-Junkroan-tests\\artifacts\\replay\\20261010-0046-b632-loop-base-13842c0\\results.json'
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9924439Z FAILED tests/test_issue967_duration_c.py::test_absolution_numbers_give_no_c_line_and_summon_raging_spirit_keeps_its_line - AssertionError: assert False
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9924648Z  +  where False = <function is_cast_copy_duration_minion at 0x000001D7731CBA60>('SummonRagingSpirit')
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9925100Z FAILED tests/test_issue973_mixed_selection.py::test_mixed_selection_collects_without_errors - AssertionError: tests/test_pane_dump.py::test_current_worktree_123_columns_has_three_cards_and_a_picture
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9925276Z   tests/test_pane_dump.py::test_open_square_press_of_a_seed_cell_draws_the_build_block
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9925401Z   tests/test_pane_dump.py::test_baseline_ref_dumps_a_nonempty_tree
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9925457Z   
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9925560Z   =================================== ERRORS ====================================
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9925804Z   ____________ ERROR collecting mods/pob-slots/bin/test_cost_cut.py _____________
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9926082Z   ImportError while importing test module 'D:\a\Poe-Junkroan-tests\Poe-Junkroan-tests\mods\pob-slots\bin\test_cost_cut.py'.
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9926208Z   Hint: make sure your test modules/packages have valid Python names.
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9926271Z   Traceback:
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9926468Z   C:\hostedtoolcache\windows\Python\3.12.10\x64\Lib\importlib\__init__.py:90: in import_module
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9926583Z       return _bootstrap._gcd_import(name[level:], package, level)
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9926662Z              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9926754Z   mods\pob-slots\bin\test_cost_cut.py:12: in <module>
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9926843Z       import token_meter as tm  # noqa: E402
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9926900Z       ^^^^^^^^^^^^^^^^^^^^^^^^
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9927007Z   E   ModuleNotFoundError: No module named 'token_meter'
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9927120Z   =========================== short test summary info ===========================
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9927196Z   ERROR mods/pob-slots/bin/test_cost_cut.py
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9927323Z   !!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9927655Z   3 tests collected, 1 error in 0.67s
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9927712Z   
+test (windows)	pytest PC-only part	2026-10-23T16:22:00.9927766Z assert 2 == 0
+test (windows)	pytest PC-only part	2026-10-23T16:22:01.5884640Z  +  where 2 = CompletedProcess(args=['C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\python.exe', '-m', 'pytest', 'tests/test_p...!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!\n3 tests collected, 1 error in 0.67s\n", stderr='').returncode
+test (windows)	pytest PC-only part	2026-10-23T16:22:01.5886101Z ERROR tests/test_issue749_early_warning.py::test_row1_same_rows_no_drop - FileNotFoundError: [Errno 2] No such file or directory: 'D:\\a\\Poe-Junkroan-tests\\Poe-Junkroan-tests\\artifacts\\benchmark\\20261005-1220-gate-20261005\\results.json'
+test (windows)	pytest PC-only part	2026-10-23T16:22:01.5887342Z ERROR tests/test_issue749_early_warning.py::test_row2_lowered_by_threshold_plus_one - FileNotFoundError: [Errno 2] No such file or directory: 'D:\\a\\Poe-Junkroan-tests\\Poe-Junkroan-tests\\artifacts\\benchmark\\20261005-1220-gate-20261005\\results.json'
+test (windows)	pytest PC-only part	2026-10-23T16:22:01.5888550Z ERROR tests/test_issue749_early_warning.py::test_row3_lowered_by_threshold_minus_one - FileNotFoundError: [Errno 2] No such file or directory: 'D:\\a\\Poe-Junkroan-tests\\Poe-Junkroan-tests\\artifacts\\benchmark\\20261005-1220-gate-20261005\\results.json'
+test (windows)	pytest PC-only part	2026-10-23T16:22:01.5889685Z ERROR tests/test_issue749_early_warning.py::test_row4_one_seed_only - FileNotFoundError: [Errno 2] No such file or directory: 'D:\\a\\Poe-Junkroan-tests\\Poe-Junkroan-tests\\artifacts\\benchmark\\20261005-1220-gate-20261005\\results.json'
+test (windows)	pytest PC-only part	2026-10-23T16:22:01.5890767Z ERROR tests/test_issue749_early_warning.py::test_row5_failed_row - FileNotFoundError: [Errno 2] No such file or directory: 'D:\\a\\Poe-Junkroan-tests\\Poe-Junkroan-tests\\artifacts\\benchmark\\20261005-1220-gate-20261005\\results.json'
+test (windows)	pytest PC-only part	2026-10-23T16:22:01.5891840Z ERROR tests/test_issue749_early_warning.py::test_row6_post_twice - FileNotFoundError: [Errno 2] No such file or directory: 'D:\\a\\Poe-Junkroan-tests\\Poe-Junkroan-tests\\artifacts\\benchmark\\20261005-1220-gate-20261005\\results.json'
+test (windows)	pytest PC-only part	2026-10-23T16:22:01.5892587Z 40 failed, 923 passed, 411 skipped, 8102 deselected, 7 warnings, 6 errors in 733.60s (0:12:13)
+test (windows)	pytest PC-only part	2026-10-23T16:22:03.0229384Z ##[error]Process completed with exit code 1.
+test (windows)	Post Run actions/checkout@v4	﻿2026-10-23T16:22:03.0474183Z Post job cleanup.
+test (windows)	Post Run actions/checkout@v4	2026-10-23T16:22:03.1844657Z [command]"C:\Program Files\Git\bin\git.exe" version
+test (windows)	Post Run actions/checkout@v4	2026-10-23T16:22:03.2144635Z git version 2.56.0.windows.2
+test (windows)	Post Run actions/checkout@v4	2026-10-23T16:22:03.2201945Z Copying 'C:\runner-home\.gitconfig' to 'D:\a\_temp\98ca9061-7293-4f36-b5a2-e89a17e98e39\.gitconfig'
+test (windows)	Post Run actions/checkout@v4	2026-10-23T16:22:03.2220581Z Temporarily overriding HOME='D:\a\_temp\98ca9061-7293-4f36-b5a2-e89a17e98e39' before making global git config changes
+test (windows)	Post Run actions/checkout@v4	2026-10-23T16:22:03.2221426Z Adding repository directory to the temporary git global config as a safe directory
+test (windows)	Post Run actions/checkout@v4	2026-10-23T16:22:03.2230444Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\Poe-Junkroan-tests\Poe-Junkroan-tests
+test (windows)	Post Run actions/checkout@v4	2026-10-23T16:22:03.2561149Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+test (windows)	Post Run actions/checkout@v4	2026-10-23T16:22:03.2895085Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+test (windows)	Post Run actions/checkout@v4	2026-10-23T16:22:03.7959875Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+test (windows)	Post Run actions/checkout@v4	2026-10-23T16:22:03.8259793Z http.https://github.com/.extraheader
+test (windows)	Post Run actions/checkout@v4	2026-10-23T16:22:03.8308425Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset-all http.https://github.com/.extraheader
+test (windows)	Post Run actions/checkout@v4	2026-10-23T16:22:03.8691397Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+test (windows)	Post Run actions/checkout@v4	2026-10-23T16:22:04.4127554Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+test (windows)	Post Run actions/checkout@v4	2026-10-23T16:22:04.4451347Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+test (windows)	Complete job	﻿2026-10-23T16:22:04.9353069Z Cleaning up orphan processes
+test (windows)	Complete job	2026-10-23T16:22:04.9913966Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-python@v5. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
