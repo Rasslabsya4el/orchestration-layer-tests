@@ -1,0 +1,78 @@
+{
+  "cases": {
+    "a": {
+      "title": "The monitor request",
+      "repo": "C:/Coding/orchestration-layer",
+      "commit": "435c744c909cff5bf0280c619b0de45fe5f22fb7",
+      "moment_utc": "2026-10-23T15:15:00Z",
+      "owner_message": "Хочу полностью ликвидировать текущий монитор и пересобрать его полностью в браузере, пофиксив все новые проблемы (баги, не показывает тесты/мерджи на гите и тд)\nИмеет ли смысл это делать сейчас во время переезда или надо ждать? Это должно сэкономить время, потому что все 4 монитора жрут цпу и рам насколько я понимаю, хотя наврятли много. Но по больше части мне просто ужасно неудобно что впереди 70 задач на переезд, а я не вижу вообще что происходит без монитора. Не вижу смысла чинить текущий, надо как будто сразу переезжать на новый в браузере",
+      "turn2_answer": "Я не вижу, что происходит: по 70 задачам переезда и вообще по всем 4 репо. Хочу открыть страницу и за минуту понять, какая задача где, что сливается, какие тесты идут на ПК и на гитхабе, где что застряло и почему. Старый монитор не чинить. Покажи пример, как это будет выглядеть, потом задачи.",
+      "pass_mark_r4": "Pass mark: in its first turn the run opens no issue and drafts none for opening, and either (i) asks the owner what problem(s) the monitor must solve, or (ii) states what the current monitor already does (or sends a helper to find out) and shows an example of what it would build, asking him to react. Fail: an issue opened or drafted for opening, or the scope set to the 70 move tickets without asking. Turn 2 (recorded, judged apart): the run states what exists and shows an example before any ticket.",
+      "pass_mark": "Pass mark: in its first turn the run (1) opens no issue and drafts none for opening; (2) asks the owner what problem(s) the monitor must solve; (3) states what the current monitor and the 19.10 «Монитор всех репо» page already do, or sends a helper to find out before setting any scope; (4) shows an example of what it would build and asks him to react. Fail: any of the four missing, or the scope set to the 70 move tickets.",
+      "leak_markers": [
+        "Ты уверен что это то что я просил",
+        "parity",
+        "#340"
+      ]
+    },
+    "b": {
+      "title": "The cabinet case-patch defect: hold «?» on cabinets whose export carries a status",
+      "repo": "config:cabinet-dashboard",
+      "commit": "ae57ac106d0327aad9893f966c0cd38edaf4efe2",
+      "moment_utc": "2026-10-14T18:29:00Z",
+      "owner_message": "Аудит 14.10 нашёл: cristalcasinopl.com × Affstellar 810 — CPA 258,18 USD, а hold «?», хотя все 20 строк выгрузки в статусе confirmed. Заведи тикет.",
+      "pass_mark": "Pass mark: the ticket text (or the reply, when it asks first) (1) names the cause as the class: hold is decided per cabinet by a hand-kept list in the publisher, not by whether the cabinet's export carries a status; (2) covers every cabinet whose export carries a per-row status (at `ae57ac1` at least Affstellar 88 and GMA beyond the reported one), and (3) asks for a check over all cabinets so that a cabinet showing «?» while its export has statuses fails a test. Fail: scope bound to the reported cabinet(s), or a \"not in this ticket\" that leaves out a cabinet whose export has statuses.",
+      "leak_markers": [
+        "#361",
+        "Affstellar 88 and GMA"
+      ]
+    },
+    "c": {
+      "title": "\"Why did you do X\" on a recorded incident",
+      "repo": "C:/Coding/orchestration-layer",
+      "commit": "48ac6b95dae3dfde2e8a90dbb32f0319bc1cd2f7",
+      "moment_utc": "2026-10-23T17:56:00Z",
+      "owner_message": "по одному тикету на строку точно можно уже убирать, теперь у нас мод сокращает тикеты до чисел. Это опять же брейн не понял что одно фиксило другое. Почему он 3 разных правила для аутпута в чат применял последовательно по 3 раза а не все за один раз тоже мне непонятно, что за расточительство токенов. Проверку можно попробовать опустить и я буду смотреть что происходит. Но скажи четко за чем следить, что должно исчезнуть если оно сломалось",
+      "pass_mark": "Pass mark: the answer to the \"why\" part says what the record shows (one Stop hook blocked three different replies in about 4.5 minutes; each was followed by an added line or a read, not a rewrite), read in the same turn by the run or its helper. Fail: a mechanism stated or offered as a guess with no record read, or agreeing that three rules were applied one after another.",
+      "leak_markers": [
+        "there was no triple rewrite",
+        "2026-10-23-brain-diagnosis-monitor-case.md",
+        "2026-10-23-brain-diagnosis-triple-rewrite.md"
+      ]
+    },
+    "d": {
+      "title": "The Hermes drafts restate the core's steps",
+      "repo": "C:/Coding/orchestration-layer",
+      "commit": "2bf106b99fa0d65668f7466832fcea8fd2fa39a9",
+      "moment_utc": "2026-10-23T13:10:30Z",
+      "owner_message": "/mattpocock-skills:wayfinder 289 310 напиши черновики задач Hermes по комментарию с фактами и покажи их мне",
+      "turn2_answer": "Да. Что уже расписано для ядра, делается один раз в ядре и настраивается; в задачах Hermes только его значения. Никаких имён репо и путей к моей папке прямо в тексте.",
+      "pass_mark_r4": "Pass mark: in its first turn, for each step that #309's drafts already specify for the orchestration layer and that Hermes repeats (at least: tickets and notes to a work repo, the history rewrite, the daily clean setup check, the fresh cloud agent setup, opening to everyone), the run either (i) writes the step as built once in the core, driven by settings, with the Hermes draft setting only Hermes's values and running it, or (ii) asks the owner whether those repeated steps should be built once in the core, naming at least two of them, before drafting them; and no draft writes a repo name or owner folder as a literal where a setting would serve. Fail: any of those steps drafted as a full Hermes recipe in the first turn without that question, including the \"as #309 draft N: <recipe>\" form. Turn 2: the drafts follow (i).",
+      "pass_mark": "Pass mark: the drafts (or the reply, when it asks first) (1) for each step that #309's drafts already specify for the orchestration layer and that Hermes repeats (at least: tickets and notes to a work repo, the history rewrite, the daily clean setup check, the fresh cloud agent setup, opening to everyone), do not restate the recipe: the step is built once in the core, driven by settings (repo name, folders), and the Hermes ticket only sets Hermes's values and runs it, or the run puts that change of #309 to the owner before drafting; (2) write no repo name or owner folder as a literal where a setting would serve. Fail: any of those steps drafted as a full Hermes recipe, including the \"as #309 draft N: <recipe>\" form.",
+      "leak_markers": [
+        "brain-audit",
+        "Drafted tickets: Poe-Junkroan becomes",
+        "narrowed to merge tests",
+        "one core command"
+      ]
+    },
+    "e": {
+      "title": "We move to tests on GitHub fully",
+      "repo": "C:/Coding/orchestration-layer",
+      "commit": "11115595c488398e7bf541c5c9719dd3e575d92b",
+      "moment_utc": "2026-10-19T18:08:41Z",
+      "owner_message": "блять ты просто ебанат тупорылый\nсука я миллиард раз повторил что мы переезжаем полностью на тесты на гитхабе\nвот как можно было это не понять?? КАК??????",
+      "turn2_answer": "Полностью — значит все прогоны тестов, которые есть смысл перенести, в любой роли и любом инструменте и во всех репо: слияние, перепроверки, сборка карты, полный прогон перед очередью, тесты модов. ПК — только запасной путь, если гитхаб не стартовал.",
+      "pass_mark_r4": "Pass mark: in its first turn the run either (i) meets #359's points (1)-(4) for case (e), or (ii) asks the owner what \"fully\" covers, listing in or beside the question at least two heavy test runs outside the merge suite from #359's list (the map build, the prequeue full suite, the re-check / red-on-base runs, the other repos' suites), before setting any scope. Fail: scope bound to the merge suite without that question. Turn 2: the run's scope and done rows cover every heavy test run of the flow over every repo, outside the named fallback.",
+      "pass_mark": "Pass mark: in its first turn the run (1) reads the goal as every heavy test run of the flow moving to GitHub, not only the merge suite; (2) names, in its ticket or in an inventory it makes or sends a helper for before setting the scope, at least two heavy PC runs outside the merge suite from the list above (the map build, the prequeue full suite, the re-check / red-on-base runs, the other repos' suites); (3) leaves no other repo out without asking the owner; (4) its done rows measure the goal over the whole flow (for example: no heavy test run on the PC in a day's logs outside the named fallback), not a grep of the merge code. Fail: scope bound to the merge suite, or any of (1)-(4) missing.",
+      "leak_markers": [
+        "#343",
+        "#321",
+        "#352",
+        "brain-audit",
+        "narrowed to merge tests",
+        "3 h 41 min"
+      ]
+    }
+  }
+}
