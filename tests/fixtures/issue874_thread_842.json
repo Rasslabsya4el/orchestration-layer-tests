@@ -1,0 +1,37 @@
+{
+ "842": {
+  "session": "36109d54",
+  "claimed": "2026-10-11T10:24:00Z",
+  "ended": "2026-10-11T11:03:26Z",
+  "comments": [
+   {
+    "createdAt": "2026-10-11T09:59:00Z",
+    "body": "**Checkpoint 1 (ORCH 7c2c14b8 takes #842).** #839 is on main (4f402033), so `full_run.is_day_now()`, `hosts.current_period` / `forced_period` and `scripts/rig_839.py` exist to be reused. Names fixed here so the docs can be written in parallel: module `src/junkroan/burner.py` (function `start_burners`), script `scripts/burner.py`.\n\n| unit | outcome | files it edits | its test | needs |\n|---|---|---|---|---|\n| 1 of 3 (helper) | the shared burner entry: BELOW_NORMAL burners for a bounded time, waits for them and kills the rest, refuses a count above 1 on the PC by day (non-zero, names the laptop "
+   },
+   {
+    "createdAt": "2026-10-11T10:08:02Z",
+    "body": "**Checkpoint 2 (ORCH 7c2c14b8, finishing): all three units done; branch 842-u1 (a6ac8326 + the docs merge) parked on merge `var/agentops/results/20261011T120747-merge-842-u1.json`.** Read on the branch; re-read on `main` after the merge and close with them:\n\n| row | number | command |\n|---|---|---|\n| 1 | period forced day, host pc, 12 burners asked: 0 started, exit 2, message names the laptop and 01:00-08:00 | `python -m pytest tests/test_issue842_burner.py -q` (9 cases) |\n| 2 | night on pc and day on laptop: 12 started, each read BELOW_NORMAL (`psutil nice()`), 0 alive 1 s after return | same"
+   },
+   {
+    "createdAt": "2026-10-11T10:09:04Z",
+    "body": "<!-- merge result -->\r\nMerge of 842-u1 did not land (red-on-branch) after 71 s in line and a suite of -, 1 failed. Result C:\\Coding\\poe-junkroan-v2\\var\\agentops\\results\\20261011T120747-merge-842-u1.json; suite output C:\\Coding\\poe-junkroan-v2\\var\\agentops\\merge_suite\\20261011T120756-000000-check-842-u1.out.\r\nFailed on this branch alone, re-run alone too: tests/test_issue842_burner.py::test_12_burners_below_normal_then_gone[pc-night]\r\n"
+   },
+   {
+    "createdAt": "2026-10-11T10:21:51Z",
+    "body": "**Brain (autopilot #780, session 36, 2026-10-11 12:25): the merge of `842-u1` did not land (1 red, on the branch alone and re-run alone). Sent back; the native blocker #839 is taken off, because what this ticket needed from #839 (`scripts/rig_839.py`, the day/night classes) is on main since 4f402033. The rest of #839 waits on the daemon's restart (#846) and this ticket does not.**\n\nRed: `tests/test_issue842_burner.py::test_12_burners_below_normal_then_gone[pc-night]`, suite output `var/agentops/merge_suite/20261011T120756-000000-check-842-u1.out`. Cause NOT KNOWN: checkpoint 2 reported the 9 c"
+   },
+   {
+    "createdAt": "2026-10-11T10:24:35Z",
+    "body": "**Checkpoint 3 (ORCH 36109d54 takes #842 over from 7c2c14b8).** Sent back per the brain's rows 7-10. One unit: fix the red `test_12_burners_below_normal_then_gone[pc-night]` (cause read in code, waits through `tests/timing_bound.py`), 20 runs in a row green, then the merge again. Branch `842-u1` (main merged in, a149f49b), worktree `wt-842-u1`; worker starts now. Own pieces: none.\n"
+   },
+   {
+    "createdAt": "2026-10-11T10:31:46Z",
+    "body": "**Checkpoint 4 (ORCH 36109d54): parked on merge `var/agentops/results/20261011T123135-merge-842-u1.json`.** Rows 7-9 (read on branch `842-u1`, commit ae62714c): row 7: the failed asserts in `var/agentops/merge_suite/20261011T120756-000000-check-842-u1.out`: line 21 `psutil.NoSuchProcess: process PID not found (pid=29532)` on `psutil.Process(pid).nice()`, and line 102-103 `assert (1791713340.2261395 - 1791713319.2244418) < 15` (21.0 s). Row 8: cause is the PC's load (suite header: `cores free 1.8 of 12 (cpu 100%)`): `tests/test_issue842_burner.py:58-63` read the burner pids after a fixed `sleep"
+   },
+   {
+    "createdAt": "2026-10-11T10:33:08Z",
+    "body": "<!-- merge result -->\r\nMerge of 842-u1 landed on main 4acf5a48ea6a after 0 s in line and a suite of 81 s, 0 failed. Result C:\\Coding\\poe-junkroan-v2\\var\\agentops\\results\\20261011T123135-merge-842-u1.json; suite output -.\r\n"
+   }
+  ]
+ }
+}

@@ -1,0 +1,48 @@
+# Test files that run on the PC only (#232): the merge suite on GitHub's Linux machines leaves them out
+# (tools/agentops/test_shard_plugin.py) and the merge runs them on the PC beside the GitHub run.
+# One repo-relative path per line, sorted.
+# A win32-skip test file that must not run on the Windows job gets a line `# not listed: <path> - <why>` instead (tests/test_issue271_pc_only_list.py).
+tests/test_agentops_dispatch.py
+tests/test_agentops_dispatch_finishing_notes_1054.py
+tests/test_agentops_dispatch_lock.py
+tests/test_agentops_githooks.py
+tests/test_agentops_guard.py
+tests/test_agentops_job_breakaway.py
+tests/test_agentops_merge_suite_restart_687.py
+tests/test_agentops_no_window.py
+tests/test_agentops_pid_alive.py
+tests/test_agentops_stop_662.py
+tests/test_agentops_suite_worktree.py
+tests/test_agentops_walk.py
+tests/test_agentops_worktree.py
+tests/test_agentops_worktree_add.py
+tests/test_dispatch_dead_sessions_restart.py
+tests/test_issue1052_dirty_gc.py
+tests/test_issue1096_port_copy.py
+tests/test_issue1116_core_guard.py
+tests/test_issue136_snapshot_run.py
+tests/test_issue179_merge_park_grace.py
+tests/test_issue195_map_output.py
+tests/test_issue196_finishing_note.py
+tests/test_issue201_map_bound.py
+tests/test_issue202_merge_trace_gap.py
+tests/test_issue219_failfast.py
+tests/test_issue219_failfast_callers.py
+tests/test_issue219_supersede.py
+tests/test_issue219_withdraw.py
+tests/test_issue224_wiring.py
+tests/test_issue260_full_run.py
+tests/test_issue260_pc_readers.py
+tests/test_issue276_jobcap.py
+tests/test_issue49_core_update.py
+tests/test_issue72_skill_roles.py
+tests/test_issue792_worktree_place.py
+tests/test_issue852_released_own_note.py
+tests/test_issue900_merge_names_tests.py
+tests/test_issue905_stop_both.py
+tests/test_issue997_unknown_author.py
+tests/test_permission_guard.py
+tests/test_select_wire.py
+tests/test_ticket_links_repos.py
+tests/test_worktree_gc.py
+tests/test_worktree_junctions.py
