@@ -1,0 +1,107 @@
+name: tests
+
+on:
+  workflow_dispatch:
+    inputs:
+      parts:
+        description: "how many parts the suite is split into (each part is one GitHub machine)"
+        type: string
+        default: "5"
+      ref:
+        description: "git ref to test"
+        type: string
+        default: "main"
+      ids:
+        description: "base64 of gzip of the node ids to run, one per line; empty = the whole suite (#247)"
+        type: string
+        default: ""
+      windows:
+        description: "true = also run the PC-only test files on windows-latest, only their listed ids when ids is set (#247)"
+        type: string
+        default: "false"
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.matrix.outputs.matrix }}
+    steps:
+      - id: matrix
+        env:
+          PARTS: ${{ inputs.parts }}
+        run: |
+          set -eu
+          case "$PARTS" in
+            ''|*[!0-9]*) echo "parts must be a whole number, got '$PARTS'"; exit 1 ;;
+          esac
+          [ "$PARTS" -ge 1 ] || { echo "parts must be at least 1"; exit 1; }
+          echo "matrix=$(seq 1 "$PARTS" | jq -R -s -c 'split("\n")[:-1] | map(tonumber)')" >> "$GITHUB_OUTPUT"
+
+  test:
+    needs: plan
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    strategy:
+      fail-fast: false
+      matrix:
+        part: ${{ fromJSON(needs.plan.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.ref }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pytest pytest-xdist pytest-testmon psutil
+      - name: git identity
+        run: |
+          git config --global user.name ci
+          git config --global user.email ci@example.invalid
+          git config --global init.defaultBranch main
+      - name: test ids
+        if: ${{ inputs.ids != '' }}
+        shell: bash
+        env:
+          IDS: ${{ inputs.ids }}
+        run: |
+          set -eo pipefail
+          printf '%s' "$IDS" | base64 -d | gunzip > "$RUNNER_TEMP/ids.txt"
+          echo "TEST_IDS_FILE=$RUNNER_TEMP/ids.txt" >> "$GITHUB_ENV"
+      - name: pytest part
+        env:
+          TEST_SHARD: ${{ matrix.part }}/${{ inputs.parts }}
+        run: python -m pytest tests -q -n auto -p tools.agentops.test_shard_plugin -m "not slow" -p no:faulthandler || { rc=$?; [ "$rc" -eq 5 ] && [ -n "${TEST_IDS_FILE:-}" ]; }  # exit 5 = nothing collected: a selection with no test for this job is a pass
+
+  windows:
+    if: ${{ inputs.windows == 'true' }}
+    name: test (windows)
+    runs-on: windows-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.ref }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pytest pytest-xdist pytest-testmon psutil
+      - name: git identity
+        shell: bash
+        run: |
+          git config --global user.name ci
+          git config --global user.email ci@example.invalid
+          git config --global init.defaultBranch main
+      - name: test ids
+        if: ${{ inputs.ids != '' }}
+        shell: bash
+        env:
+          IDS: ${{ inputs.ids }}
+        run: |
+          set -eo pipefail
+          printf '%s' "$IDS" | base64 -d | gunzip > "$RUNNER_TEMP/ids.txt"
+          echo "TEST_IDS_FILE=$RUNNER_TEMP/ids.txt" >> "$GITHUB_ENV"
+      - name: pytest PC-only part
+        shell: bash
+        env:
+          TEST_PC_ONLY: "1"
+        run: python -m pytest tests -q -p tools.agentops.test_shard_plugin -m "not slow" -p no:faulthandler || { rc=$?; [ "$rc" -eq 5 ] && [ -n "${TEST_IDS_FILE:-}" ]; }  # exit 5 = nothing collected: a selection with no test for this job is a pass
