@@ -1,0 +1,1401 @@
+{
+ "at_ms": 1792776147574,
+ "refresh_s": 2,
+ "data": {
+  "at": "19:22:00",
+  "machine": {
+   "cores": 12,
+   "cpu": {
+    "work": 0.0,
+    "agents": 13.5,
+    "app": 9.6,
+    "tests": 0.0,
+    "you": 25.7,
+    "unmeasured": 50.5
+   },
+   "cpu_total": 99.3,
+   "interval_s": 1.1,
+   "ram": {
+    "work": 0.0,
+    "agents": 6.3,
+    "app": 2.9,
+    "tests": 0.0,
+    "you": 12.7,
+    "unmeasured": 2.0
+   },
+   "ram_total": 31.9,
+   "ram_free": 7.9,
+   "merge": {
+    "cpu": 0.0,
+    "cpu_raw": 0.0,
+    "ram_mb": 22
+   }
+  },
+  "agents": [],
+  "merge": {
+   "at": "2026-10-23T19:22:02",
+   "running": {
+    "kind": "commit",
+    "message": "brain.md: stopgap 'The architect' goal intake (owner 23.10 1",
+    "branches": [],
+    "issues": [
+     344
+    ],
+    "phase": "suite",
+    "started": "2026-10-23T19:21:57",
+    "queued": null,
+    "percent": null,
+    "tests_done": null,
+    "tests_total": null,
+    "failed": 0,
+    "eta_s": 595,
+    "eta_basis": "recent runs",
+    "workers": 6,
+    "suite_out": "C:\\Coding\\orchestration-layer\\var\\agentops\\merge_suite\\20261023T184306-000000-commit.out",
+    "eta_h": "10 min",
+    "elapsed_h": "5 s"
+   },
+   "full_run": null,
+   "waiting": [
+    {
+     "branch": "i341-merge",
+     "issues": [
+      341
+     ],
+     "position": 1,
+     "queued": "2026-10-23T19:17:09",
+     "waited_s": 293,
+     "check": null,
+     "priority_class": "flow-fix",
+     "eta_start_s": 595,
+     "batch": 1,
+     "waited_h": "5 min",
+     "eta_start_h": "10 min",
+     "takes_h": "10 min"
+    }
+   ],
+   "queue_end_s": 1195,
+   "landed": [
+    {
+     "branch": "i325-m",
+     "issues": [
+      325
+     ],
+     "queued": "2026-10-23T18:15:10",
+     "landed": "2026-10-23T18:43:04",
+     "queued_to_land_s": 1674,
+     "rc": 1,
+     "reason": "dirty",
+     "failed": null,
+     "attempts": 1,
+     "failed_before": 0,
+     "took_h": "28 min",
+     "ended": "2026-10-23T18:43:04"
+    },
+    {
+     "branch": "i323",
+     "issues": [
+      323
+     ],
+     "queued": "2026-10-23T17:31:09",
+     "landed": "2026-10-23T18:43:01",
+     "queued_to_land_s": 4312,
+     "rc": 0,
+     "reason": "pushed",
+     "failed": 0,
+     "attempts": 1,
+     "failed_before": 0,
+     "took_h": "72 min"
+    },
+    {
+     "branch": "i319-fix",
+     "issues": [
+      319
+     ],
+     "queued": "2026-10-23T17:13:48",
+     "landed": "2026-10-23T17:24:28",
+     "queued_to_land_s": 640,
+     "rc": 0,
+     "reason": "pushed",
+     "failed": 0,
+     "attempts": 1,
+     "failed_before": 0,
+     "took_h": "11 min"
+    },
+    {
+     "branch": "i333",
+     "issues": [
+      333
+     ],
+     "queued": "2026-10-23T17:13:44",
+     "landed": "2026-10-23T17:24:28",
+     "queued_to_land_s": 644,
+     "rc": 0,
+     "reason": "pushed",
+     "failed": 0,
+     "attempts": 1,
+     "failed_before": 0,
+     "took_h": "11 min"
+    },
+    {
+     "branch": "i319-merge",
+     "issues": [
+      319
+     ],
+     "queued": "2026-10-23T16:35:24",
+     "landed": "2026-10-23T16:46:11",
+     "queued_to_land_s": 647,
+     "rc": 1,
+     "reason": "red-suite",
+     "failed": 1,
+     "attempts": 1,
+     "failed_before": 0,
+     "took_h": "11 min",
+     "ended": "2026-10-23T16:46:11"
+    },
+    {
+     "branch": "i318",
+     "issues": [
+      318
+     ],
+     "queued": "2026-10-23T15:12:23",
+     "landed": "2026-10-23T15:21:32",
+     "queued_to_land_s": 549,
+     "rc": 0,
+     "reason": "pushed",
+     "failed": 0,
+     "attempts": 1,
+     "failed_before": 0,
+     "took_h": "9 min"
+    },
+    {
+     "branch": "i316-u3",
+     "issues": [
+      316
+     ],
+     "queued": "2026-10-23T15:11:26",
+     "landed": "2026-10-23T15:17:09",
+     "queued_to_land_s": 343,
+     "rc": 0,
+     "reason": "pushed",
+     "failed": 0,
+     "attempts": 1,
+     "failed_before": 0,
+     "took_h": "6 min"
+    },
+    {
+     "branch": "i316-u1",
+     "issues": [
+      316
+     ],
+     "queued": "2026-10-23T13:46:44",
+     "landed": "2026-10-23T13:51:40",
+     "queued_to_land_s": 296,
+     "rc": 0,
+     "reason": "pushed",
+     "failed": 0,
+     "attempts": 1,
+     "failed_before": 0,
+     "took_h": "5 min"
+    },
+    {
+     "branch": "i313",
+     "issues": [
+      313
+     ],
+     "queued": "2026-10-23T12:53:59",
+     "landed": "2026-10-23T12:59:50",
+     "queued_to_land_s": 351,
+     "rc": 0,
+     "reason": "pushed",
+     "failed": 0,
+     "attempts": 1,
+     "failed_before": 0,
+     "took_h": "6 min"
+    },
+    {
+     "branch": "i305",
+     "issues": [
+      305
+     ],
+     "queued": "2026-10-21T22:40:49",
+     "landed": "2026-10-21T22:48:29",
+     "queued_to_land_s": 460,
+     "rc": 0,
+     "reason": "pushed",
+     "failed": 0,
+     "attempts": 1,
+     "failed_before": 0,
+     "took_h": "8 min"
+    },
+    {
+     "branch": "i270",
+     "issues": [
+      270
+     ],
+     "queued": "2026-10-21T17:03:42",
+     "landed": "2026-10-21T17:11:31",
+     "queued_to_land_s": 469,
+     "rc": 0,
+     "reason": "pushed",
+     "failed": 0,
+     "attempts": 1,
+     "failed_before": 0,
+     "took_h": "8 min"
+    },
+    {
+     "branch": "i287",
+     "issues": [
+      287
+     ],
+     "queued": "2026-10-21T14:51:28",
+     "landed": "2026-10-21T14:56:40",
+     "queued_to_land_s": 312,
+     "rc": 0,
+     "reason": "pushed",
+     "failed": 0,
+     "attempts": 1,
+     "failed_before": 0,
+     "took_h": "5 min"
+    },
+    {
+     "branch": "i261b",
+     "issues": [
+      261
+     ],
+     "queued": "2026-10-21T14:17:49",
+     "landed": "2026-10-21T14:22:15",
+     "queued_to_land_s": 266,
+     "rc": 0,
+     "reason": "pushed",
+     "failed": 0,
+     "attempts": 1,
+     "failed_before": 0,
+     "took_h": "4 min"
+    },
+    {
+     "branch": "--issue",
+     "issues": [
+      285
+     ],
+     "queued": "2026-10-21T12:42:20",
+     "landed": "2026-10-21T12:51:27",
+     "queued_to_land_s": 547,
+     "rc": 0,
+     "reason": "pushed",
+     "failed": 0,
+     "attempts": 1,
+     "failed_before": 0,
+     "took_h": "9 min"
+    },
+    {
+     "branch": "i282",
+     "issues": [
+      282
+     ],
+     "queued": "2026-10-21T11:50:07",
+     "landed": "2026-10-21T11:56:28",
+     "queued_to_land_s": 381,
+     "rc": 0,
+     "reason": "pushed",
+     "failed": 0,
+     "attempts": 1,
+     "failed_before": 0,
+     "took_h": "6 min"
+    },
+    {
+     "branch": "i283",
+     "issues": [
+      283
+     ],
+     "queued": "2026-10-21T10:59:28",
+     "landed": "2026-10-21T11:04:57",
+     "queued_to_land_s": 329,
+     "rc": 0,
+     "reason": "pushed",
+     "failed": 0,
+     "attempts": 1,
+     "failed_before": 0,
+     "took_h": "5 min"
+    },
+    {
+     "branch": "i280",
+     "issues": [
+      280
+     ],
+     "queued": "2026-10-21T10:34:28",
+     "landed": "2026-10-21T10:39:45",
+     "queued_to_land_s": 317,
+     "rc": 0,
+     "reason": "pushed",
+     "failed": 0,
+     "attempts": 1,
+     "failed_before": 0,
+     "took_h": "5 min"
+    },
+    {
+     "branch": "i281",
+     "issues": [
+      281
+     ],
+     "queued": "2026-10-21T10:27:01",
+     "landed": "2026-10-21T10:30:45",
+     "queued_to_land_s": 224,
+     "rc": 0,
+     "reason": "pushed",
+     "failed": 0,
+     "attempts": 1,
+     "failed_before": 0,
+     "took_h": "4 min"
+    },
+    {
+     "branch": "i279",
+     "issues": [
+      279
+     ],
+     "queued": "2026-10-21T10:15:03",
+     "landed": "2026-10-21T10:19:15",
+     "queued_to_land_s": 252,
+     "rc": 0,
+     "reason": "pushed",
+     "failed": 0,
+     "attempts": 1,
+     "failed_before": 0,
+     "took_h": "4 min"
+    },
+    {
+     "branch": "i278",
+     "issues": [
+      278
+     ],
+     "queued": "2026-10-20T21:04:19",
+     "landed": "2026-10-20T21:10:37",
+     "queued_to_land_s": 378,
+     "rc": 0,
+     "reason": "pushed",
+     "failed": 0,
+     "attempts": 1,
+     "failed_before": 0,
+     "took_h": "6 min"
+    },
+    {
+     "branch": "i276",
+     "issues": [
+      276
+     ],
+     "queued": "2026-10-20T19:26:15",
+     "landed": "2026-10-20T19:33:18",
+     "queued_to_land_s": 423,
+     "rc": 0,
+     "reason": "pushed",
+     "failed": 0,
+     "attempts": 1,
+     "failed_before": 0,
+     "took_h": "7 min"
+    },
+    {
+     "branch": "m223",
+     "issues": [
+      223
+     ],
+     "queued": "2026-10-20T19:20:02",
+     "landed": "2026-10-20T19:28:05",
+     "queued_to_land_s": 483,
+     "rc": 0,
+     "reason": "pushed",
+     "failed": 0,
+     "attempts": 3,
+     "failed_before": 2,
+     "took_h": "8 min"
+    },
+    {
+     "branch": "i264",
+     "issues": [
+      264
+     ],
+     "queued": "2026-10-20T19:05:42",
+     "landed": "2026-10-20T19:17:08",
+     "queued_to_land_s": 686,
+     "rc": 0,
+     "reason": "pushed",
+     "failed": 0,
+     "attempts": 1,
+     "failed_before": 0,
+     "took_h": "11 min"
+    },
+    {
+     "branch": "i272",
+     "issues": [
+      272
+     ],
+     "queued": "2026-10-20T18:59:53",
+     "landed": "2026-10-20T19:07:41",
+     "queued_to_land_s": 468,
+     "rc": 0,
+     "reason": "pushed",
+     "failed": 0,
+     "attempts": 2,
+     "failed_before": 1,
+     "took_h": "8 min"
+    },
+    {
+     "branch": "c274",
+     "issues": [
+      273,
+      274
+     ],
+     "queued": "2026-10-20T18:43:06",
+     "landed": "2026-10-20T18:49:42",
+     "queued_to_land_s": 396,
+     "rc": 0,
+     "reason": "pushed",
+     "failed": 0,
+     "attempts": 1,
+     "failed_before": 0,
+     "took_h": "7 min"
+    },
+    {
+     "branch": "i253",
+     "issues": [
+      253
+     ],
+     "queued": "2026-10-20T16:02:47",
+     "landed": "2026-10-20T16:39:52",
+     "queued_to_land_s": 2225,
+     "rc": 0,
+     "reason": "pushed",
+     "failed": 0,
+     "attempts": 2,
+     "failed_before": 1,
+     "took_h": "37 min"
+    },
+    {
+     "branch": "m271",
+     "issues": [
+      271
+     ],
+     "queued": "2026-10-20T16:00:14",
+     "landed": "2026-10-20T16:25:00",
+     "queued_to_land_s": 1486,
+     "rc": 0,
+     "reason": "pushed",
+     "failed": 0,
+     "attempts": 1,
+     "failed_before": 0,
+     "took_h": "25 min"
+    },
+    {
+     "branch": "r219",
+     "issues": [
+      269
+     ],
+     "queued": "2026-10-20T15:55:11",
+     "landed": "2026-10-20T16:09:52",
+     "queued_to_land_s": 881,
+     "rc": 0,
+     "reason": "pushed",
+     "failed": 0,
+     "attempts": 1,
+     "failed_before": 0,
+     "took_h": "15 min"
+    },
+    {
+     "branch": "i265-u2",
+     "issues": [
+      265
+     ],
+     "queued": "2026-10-20T15:49:19",
+     "landed": "2026-10-20T15:55:28",
+     "queued_to_land_s": 369,
+     "rc": 0,
+     "reason": "pushed",
+     "failed": 0,
+     "attempts": 2,
+     "failed_before": 1,
+     "took_h": "6 min"
+    },
+    {
+     "branch": "i254",
+     "issues": [
+      254
+     ],
+     "queued": "2026-10-20T15:44:26",
+     "landed": "2026-10-20T15:49:25",
+     "queued_to_land_s": 299,
+     "rc": 0,
+     "reason": "pushed",
+     "failed": 0,
+     "attempts": 3,
+     "failed_before": 2,
+     "took_h": "5 min"
+    },
+    {
+     "branch": "i267-m",
+     "issues": [
+      267
+     ],
+     "queued": "2026-10-20T15:19:14",
+     "landed": "2026-10-20T15:23:39",
+     "queued_to_land_s": 265,
+     "rc": 0,
+     "reason": "pushed",
+     "failed": 0,
+     "attempts": 1,
+     "failed_before": 0,
+     "took_h": "4 min"
+    },
+    {
+     "branch": "i176r",
+     "issues": [
+      176
+     ],
+     "queued": "2026-10-20T13:11:56",
+     "landed": "2026-10-20T15:19:48",
+     "queued_to_land_s": 7672,
+     "rc": 0,
+     "reason": "pushed",
+     "failed": 0,
+     "attempts": 2,
+     "failed_before": 1,
+     "took_h": "2 h 08 min"
+    },
+    {
+     "branch": "i211",
+     "issues": [
+      211
+     ],
+     "queued": "2026-10-20T12:22:32",
+     "landed": "2026-10-20T12:34:51",
+     "queued_to_land_s": 739,
+     "rc": 1,
+     "reason": "red-on-branch",
+     "failed": 1,
+     "attempts": 4,
+     "failed_before": 3,
+     "took_h": "12 min",
+     "ended": "2026-10-20T12:34:51"
+    },
+    {
+     "branch": "u268-1",
+     "issues": [
+      268
+     ],
+     "queued": "2026-10-20T12:14:42",
+     "landed": "2026-10-20T12:30:26",
+     "queued_to_land_s": 944,
+     "rc": 1,
+     "reason": "withdrawn",
+     "failed": null,
+     "attempts": 1,
+     "failed_before": 0,
+     "took_h": "16 min",
+     "ended": "2026-10-20T12:30:26"
+    },
+    {
+     "branch": "u239",
+     "issues": [
+      239
+     ],
+     "queued": "2026-10-20T11:31:54",
+     "landed": "2026-10-20T12:05:40",
+     "queued_to_land_s": 2026,
+     "rc": 0,
+     "reason": "pushed",
+     "failed": 0,
+     "attempts": 4,
+     "failed_before": 3,
+     "took_h": "34 min"
+    },
+    {
+     "branch": "m268",
+     "issues": [
+      268
+     ],
+     "queued": "2026-10-20T11:29:12",
+     "landed": "2026-10-20T12:05:40",
+     "queued_to_land_s": 2188,
+     "rc": 0,
+     "reason": "pushed",
+     "failed": 0,
+     "attempts": 1,
+     "failed_before": 0,
+     "took_h": "36 min"
+    },
+    {
+     "branch": "i219",
+     "issues": [
+      219
+     ],
+     "queued": "2026-10-20T10:37:23",
+     "landed": "2026-10-20T10:59:54",
+     "queued_to_land_s": 1351,
+     "rc": 0,
+     "reason": "pushed",
+     "failed": 0,
+     "attempts": 2,
+     "failed_before": 1,
+     "took_h": "23 min"
+    },
+    {
+     "branch": "i249",
+     "issues": [
+      249
+     ],
+     "queued": "2026-10-20T10:10:33",
+     "landed": "2026-10-20T10:30:20",
+     "queued_to_land_s": 1187,
+     "rc": 0,
+     "reason": "pushed",
+     "failed": 0,
+     "attempts": 1,
+     "failed_before": 0,
+     "took_h": "20 min"
+    },
+    {
+     "branch": "i235",
+     "issues": [
+      235
+     ],
+     "queued": "2026-10-20T10:02:38",
+     "landed": "2026-10-20T10:14:26",
+     "queued_to_land_s": 708,
+     "rc": 0,
+     "reason": "pushed",
+     "failed": 0,
+     "attempts": 1,
+     "failed_before": 0,
+     "took_h": "12 min"
+    },
+    {
+     "branch": "u238",
+     "issues": [
+      238
+     ],
+     "queued": "2026-10-20T09:58:46",
+     "landed": "2026-10-20T10:14:26",
+     "queued_to_land_s": 940,
+     "rc": 0,
+     "reason": "pushed",
+     "failed": 0,
+     "attempts": 2,
+     "failed_before": 1,
+     "took_h": "16 min"
+    },
+    {
+     "branch": "i252",
+     "issues": [
+      252
+     ],
+     "queued": "2026-10-20T09:57:47",
+     "landed": "2026-10-20T10:03:10",
+     "queued_to_land_s": 323,
+     "rc": 0,
+     "reason": "pushed",
+     "failed": 0,
+     "attempts": 2,
+     "failed_before": 1,
+     "took_h": "5 min"
+    },
+    {
+     "branch": "i250",
+     "issues": [
+      250
+     ],
+     "queued": "2026-10-20T09:57:19",
+     "landed": "2026-10-20T10:00:15",
+     "queued_to_land_s": 176,
+     "rc": 0,
+     "reason": "pushed",
+     "failed": 0,
+     "attempts": 2,
+     "failed_before": 1,
+     "took_h": "3 min"
+    },
+    {
+     "branch": "m221",
+     "issues": [
+      221
+     ],
+     "queued": "2026-10-20T09:51:09",
+     "landed": "2026-10-20T09:56:22",
+     "queued_to_land_s": 313,
+     "rc": 0,
+     "reason": "pushed",
+     "failed": 0,
+     "attempts": 3,
+     "failed_before": 2,
+     "took_h": "5 min"
+    },
+    {
+     "branch": "fix131",
+     "issues": [
+      263
+     ],
+     "queued": "2026-10-20T09:47:32",
+     "landed": "2026-10-20T09:50:18",
+     "queued_to_land_s": 166,
+     "rc": 0,
+     "reason": "pushed",
+     "failed": 0,
+     "attempts": 1,
+     "failed_before": 0,
+     "took_h": "3 min"
+    },
+    {
+     "branch": "m222",
+     "issues": [
+      222
+     ],
+     "queued": "2026-10-20T09:35:32",
+     "landed": "2026-10-20T09:39:13",
+     "queued_to_land_s": 221,
+     "rc": 0,
+     "reason": "pushed",
+     "failed": 0,
+     "attempts": 2,
+     "failed_before": 1,
+     "took_h": "4 min"
+    },
+    {
+     "branch": "i229",
+     "issues": [
+      229
+     ],
+     "queued": "2026-10-20T09:30:33",
+     "landed": "2026-10-20T09:33:34",
+     "queued_to_land_s": 181,
+     "rc": 0,
+     "reason": "pushed",
+     "failed": 0,
+     "attempts": 2,
+     "failed_before": 1,
+     "took_h": "3 min"
+    },
+    {
+     "branch": "r237",
+     "issues": [
+      237
+     ],
+     "queued": "2026-10-20T09:05:05",
+     "landed": "2026-10-20T09:07:57",
+     "queued_to_land_s": 172,
+     "rc": 0,
+     "reason": "pushed",
+     "failed": 0,
+     "attempts": 1,
+     "failed_before": 0,
+     "took_h": "3 min"
+    },
+    {
+     "branch": "u230",
+     "issues": [
+      230
+     ],
+     "queued": "2026-10-20T08:57:50",
+     "landed": "2026-10-20T09:03:31",
+     "queued_to_land_s": 341,
+     "rc": 0,
+     "reason": "pushed",
+     "failed": 0,
+     "attempts": 2,
+     "failed_before": 1,
+     "took_h": "6 min"
+    },
+    {
+     "branch": "i256",
+     "issues": [
+      256
+     ],
+     "queued": "2026-10-20T08:33:58",
+     "landed": "2026-10-20T08:40:03",
+     "queued_to_land_s": 365,
+     "rc": 0,
+     "reason": "pushed",
+     "failed": 0,
+     "attempts": 2,
+     "failed_before": 1,
+     "took_h": "6 min"
+    },
+    {
+     "branch": "i260f",
+     "issues": [
+      259,
+      260
+     ],
+     "queued": "2026-10-20T08:18:39",
+     "landed": "2026-10-20T08:23:27",
+     "queued_to_land_s": 288,
+     "rc": 0,
+     "reason": "pushed",
+     "failed": 0,
+     "attempts": 2,
+     "failed_before": 1,
+     "took_h": "5 min"
+    },
+    {
+     "branch": "i259",
+     "issues": [
+      259
+     ],
+     "queued": "2026-10-20T05:56:08",
+     "landed": "2026-10-20T06:01:59",
+     "queued_to_land_s": 351,
+     "rc": 1,
+     "reason": "red-suite",
+     "failed": 2,
+     "attempts": 1,
+     "failed_before": 0,
+     "took_h": "6 min",
+     "ended": "2026-10-20T06:01:59"
+    },
+    {
+     "branch": "i255",
+     "issues": [
+      255
+     ],
+     "queued": "2026-10-20T00:41:00",
+     "landed": "2026-10-20T00:45:20",
+     "queued_to_land_s": 260,
+     "rc": 0,
+     "reason": "pushed",
+     "failed": 0,
+     "attempts": 1,
+     "failed_before": 0,
+     "took_h": "4 min"
+    },
+    {
+     "branch": "i251",
+     "issues": [
+      251
+     ],
+     "queued": "2026-10-19T23:41:39",
+     "landed": "2026-10-20T00:15:56",
+     "queued_to_land_s": 2057,
+     "rc": 0,
+     "reason": "pushed",
+     "failed": 0,
+     "attempts": 1,
+     "failed_before": 0,
+     "took_h": "34 min"
+    },
+    {
+     "branch": "i247",
+     "issues": [
+      247
+     ],
+     "queued": "2026-10-19T21:47:35",
+     "landed": "2026-10-19T22:26:38",
+     "queued_to_land_s": 2343,
+     "rc": 0,
+     "reason": "pushed",
+     "failed": 0,
+     "attempts": 1,
+     "failed_before": 0,
+     "took_h": "39 min"
+    },
+    {
+     "branch": "u248",
+     "issues": [
+      248
+     ],
+     "queued": "2026-10-19T21:24:19",
+     "landed": "2026-10-19T22:04:52",
+     "queued_to_land_s": 2433,
+     "rc": 0,
+     "reason": "pushed",
+     "failed": 0,
+     "attempts": 1,
+     "failed_before": 0,
+     "took_h": "41 min"
+    },
+    {
+     "branch": "m218",
+     "issues": [
+      218
+     ],
+     "queued": "2026-10-19T20:32:00",
+     "landed": "2026-10-19T20:55:51",
+     "queued_to_land_s": 1431,
+     "rc": 0,
+     "reason": "pushed",
+     "failed": 0,
+     "attempts": 1,
+     "failed_before": 0,
+     "took_h": "24 min"
+    },
+    {
+     "branch": "u245",
+     "issues": [
+      245
+     ],
+     "queued": "2026-10-19T20:16:39",
+     "landed": "2026-10-19T20:50:43",
+     "queued_to_land_s": 2044,
+     "rc": 0,
+     "reason": "pushed",
+     "failed": 0,
+     "attempts": 1,
+     "failed_before": 0,
+     "took_h": "34 min"
+    },
+    {
+     "branch": "u244",
+     "issues": [
+      244
+     ],
+     "queued": "2026-10-19T20:16:17",
+     "landed": "2026-10-19T20:50:43",
+     "queued_to_land_s": 2066,
+     "rc": 0,
+     "reason": "pushed",
+     "failed": 0,
+     "attempts": 1,
+     "failed_before": 0,
+     "took_h": "34 min"
+    },
+    {
+     "branch": "i214",
+     "issues": [
+      214
+     ],
+     "queued": "2026-10-19T20:05:45",
+     "landed": "2026-10-19T20:55:51",
+     "queued_to_land_s": 3006,
+     "rc": 0,
+     "reason": "pushed",
+     "failed": 0,
+     "attempts": 2,
+     "failed_before": 1,
+     "took_h": "50 min"
+    },
+    {
+     "branch": "u216",
+     "issues": [
+      216
+     ],
+     "queued": "2026-10-19T20:00:51",
+     "landed": "2026-10-19T20:55:51",
+     "queued_to_land_s": 3300,
+     "rc": 0,
+     "reason": "pushed",
+     "failed": 0,
+     "attempts": 2,
+     "failed_before": 1,
+     "took_h": "55 min"
+    }
+   ],
+   "machine_waiting": [
+    {
+     "repo": "orchestration-layer",
+     "run": "i320-merge",
+     "tests": 1818,
+     "since": "18:52",
+     "priority": true,
+     "order": "1 of 4"
+    },
+    {
+     "repo": "orchestration-layer",
+     "run": "i326-m",
+     "tests": 2800,
+     "since": "17:40",
+     "priority": false,
+     "order": "1 of 4"
+    },
+    {
+     "repo": "orchestration-layer",
+     "run": "i328-m",
+     "tests": 4711,
+     "since": "17:49",
+     "priority": false,
+     "order": "1 of 4"
+    },
+    {
+     "repo": "orchestration-layer",
+     "run": "i327-m",
+     "tests": 4711,
+     "since": "18:02",
+     "priority": false,
+     "order": "1 of 4"
+    },
+    {
+     "repo": "orchestration-layer",
+     "run": "commit",
+     "tests": 1085,
+     "since": "18:43",
+     "priority": false,
+     "order": "1 of 4"
+    },
+    {
+     "repo": "orchestration-layer",
+     "run": "i325-m",
+     "tests": 2275,
+     "since": "18:56",
+     "priority": false,
+     "order": "1 of 4"
+    },
+    {
+     "repo": "orchestration-layer",
+     "run": "g323",
+     "tests": 1086,
+     "since": "18:57",
+     "priority": false,
+     "order": "1 of 4"
+    },
+    {
+     "repo": "Hermes-finances-agent",
+     "run": "89-count",
+     "tests": 501,
+     "since": "18:28",
+     "priority": false,
+     "order": "3 of 4"
+    }
+   ],
+   "machines_in_use": 0,
+   "machines_total": 20,
+   "queue_end_h": "20 min",
+   "queue_until": "19:41"
+  },
+  "pipeline": [
+   {
+    "number": 341,
+    "title": "A changed test kept out of the public test copy runs on the PC, not on GitHub",
+    "stage": "merge",
+    "failed": false,
+    "workers": 0,
+    "strong": 0,
+    "researchers": 0,
+    "merge_position": 2,
+    "merge_percent": null,
+    "started_at": "2026-10-23T15:56:05Z",
+    "stage_since": "2026-10-23T19:17:09",
+    "units": null,
+    "wait": null,
+    "returned": false
+   },
+   {
+    "number": 344,
+    "title": "The brain looks at the whole project as developer and product owner",
+    "stage": "merge",
+    "failed": false,
+    "workers": 0,
+    "strong": 0,
+    "researchers": 0,
+    "merge_position": 1,
+    "merge_percent": null,
+    "started_at": null,
+    "stage_since": "2026-10-23T19:21:57",
+    "units": null,
+    "wait": null,
+    "returned": false
+   },
+   {
+    "number": 323,
+    "title": "Where a repo's tickets and notes live is a setting",
+    "stage": "accept",
+    "failed": false,
+    "workers": 0,
+    "strong": 0,
+    "researchers": 0,
+    "merge_position": null,
+    "merge_percent": null,
+    "started_at": "2026-10-23T14:02:23Z",
+    "stage_since": "2026-10-23T18:43:01",
+    "units": {
+     "done": 5,
+     "total": 6
+    },
+    "wait": null,
+    "returned": false
+   },
+   {
+    "number": 239,
+    "title": "The heavy-run line knows each repo by its GitHub name and records each wait",
+    "stage": "ready",
+    "failed": false,
+    "workers": 0,
+    "strong": 0,
+    "researchers": 0,
+    "merge_position": null,
+    "merge_percent": null,
+    "started_at": "2026-10-19T15:06:26Z",
+    "stage_since": "2026-10-19T15:06:26Z",
+    "units": null,
+    "wait": {
+     "reason": "the next heavy run of Hermes or PoB after the landing (row…",
+     "until": null
+    },
+    "returned": false
+   },
+   {
+    "number": 247,
+    "title": "Every merge's tests run fully on GitHub machines, the PC only as fallback",
+    "stage": "ready",
+    "failed": false,
+    "workers": 0,
+    "strong": 0,
+    "researchers": 0,
+    "merge_position": null,
+    "merge_percent": null,
+    "started_at": "2026-10-19T18:08:21Z",
+    "stage_since": "2026-10-19T18:08:21Z",
+    "units": null,
+    "wait": {
+     "reason": "row 4 live, the next 10 merges here after 63fe22b record a…",
+     "until": null
+    },
+    "returned": false
+   },
+   {
+    "number": 279,
+    "title": "The collector's 2 GB cap stays readable after the dispatcher restarts",
+    "stage": "ready",
+    "failed": false,
+    "workers": 0,
+    "strong": 0,
+    "researchers": 0,
+    "merge_position": null,
+    "merge_percent": null,
+    "started_at": "2026-10-21T08:06:28Z",
+    "stage_since": "2026-10-21T08:06:28Z",
+    "units": null,
+    "wait": {
+     "reason": "row 3 live: a second dispatcher restart after the core upda…",
+     "until": null
+    },
+    "returned": false
+   },
+   {
+    "number": 280,
+    "title": "The background dispatcher writes every log line at once, none refused",
+    "stage": "ready",
+    "failed": false,
+    "workers": 0,
+    "strong": 0,
+    "researchers": 0,
+    "merge_position": null,
+    "merge_percent": null,
+    "started_at": "2026-10-21T08:08:05Z",
+    "stage_since": "2026-10-21T08:08:05Z",
+    "units": {
+     "done": 3,
+     "total": 3
+    },
+    "wait": {
+     "reason": "row 6 live: 24 h after the dispatchers restart on the lande…",
+     "until": null
+    },
+    "returned": false
+   },
+   {
+    "number": 281,
+    "title": "Merge tests of PoE, RepA and Hermes run on GitHub machines",
+    "stage": "ready",
+    "failed": false,
+    "workers": 0,
+    "strong": 0,
+    "researchers": 0,
+    "merge_position": null,
+    "merge_percent": null,
+    "started_at": "2026-10-21T08:11:13Z",
+    "stage_since": "2026-10-21T08:11:13Z",
+    "units": {
+     "done": 1,
+     "total": 4
+    },
+    "wait": {
+     "reason": "units 2-4 in the three repos: Hermes-finances-agent#88, Poe…",
+     "until": null
+    },
+    "returned": false
+   },
+   {
+    "number": 282,
+    "title": "The daily losses note counts real losses, not queue waits and log lines",
+    "stage": "ready",
+    "failed": false,
+    "workers": 0,
+    "strong": 0,
+    "researchers": 0,
+    "merge_position": null,
+    "merge_percent": null,
+    "started_at": "2026-10-21T08:12:49Z",
+    "stage_since": "2026-10-21T08:12:49Z",
+    "units": {
+     "done": 2,
+     "total": 3
+    },
+    "wait": {
+     "reason": "row 5 live: the next daily losses note in RepA and PoE show…",
+     "until": null
+    },
+    "returned": false
+   },
+   {
+    "number": 313,
+    "title": "Map tasks that need no owner reach ORCH as ready tickets",
+    "stage": "ready",
+    "failed": false,
+    "workers": 0,
+    "strong": 0,
+    "researchers": 0,
+    "merge_position": null,
+    "merge_percent": null,
+    "started_at": "2026-10-23T10:06:31Z",
+    "stage_since": "2026-10-23T10:06:31Z",
+    "units": null,
+    "wait": {
+     "reason": "parked",
+     "until": null
+    },
+    "returned": false
+   },
+   {
+    "number": 316,
+    "title": "A cleared brain chat reads its own fresh hand-off entry on its own",
+    "stage": "ready",
+    "failed": false,
+    "workers": 0,
+    "strong": 0,
+    "researchers": 0,
+    "merge_position": null,
+    "merge_percent": null,
+    "started_at": "2026-10-23T11:15:24Z",
+    "stage_since": "2026-10-23T11:15:24Z",
+    "units": {
+     "done": 2,
+     "total": 2
+    },
+    "wait": {
+     "reason": "parked",
+     "until": null
+    },
+    "returned": false
+   },
+   {
+    "number": 318,
+    "title": "A hand-off that waits on the owner's answer makes the next chat ask it whole",
+    "stage": "ready",
+    "failed": false,
+    "workers": 0,
+    "strong": 0,
+    "researchers": 0,
+    "merge_position": null,
+    "merge_percent": null,
+    "started_at": "2026-10-23T12:45:13Z",
+    "stage_since": "2026-10-23T12:45:13Z",
+    "units": null,
+    "wait": {
+     "reason": "parked",
+     "until": null
+    },
+    "returned": false
+   },
+   {
+    "number": 320,
+    "title": "A hook's rule names its role, so a cloud worker never acts as the brain",
+    "stage": "ready",
+    "failed": false,
+    "workers": 0,
+    "strong": 0,
+    "researchers": 0,
+    "merge_position": null,
+    "merge_percent": null,
+    "started_at": "2026-10-23T14:02:17Z",
+    "stage_since": "2026-10-23T14:02:17Z",
+    "units": {
+     "done": 4,
+     "total": 4
+    },
+    "wait": null,
+    "returned": false
+   },
+   {
+    "number": 325,
+    "title": "Each repo is marked quick or product, and the brain works by the mark",
+    "stage": "ready",
+    "failed": false,
+    "workers": 0,
+    "strong": 0,
+    "researchers": 0,
+    "merge_position": null,
+    "merge_percent": null,
+    "started_at": "2026-10-23T14:02:25Z",
+    "stage_since": "2026-10-23T14:02:25Z",
+    "units": null,
+    "wait": null,
+    "returned": false
+   },
+   {
+    "number": 333,
+    "title": "GPT research shows its progress while it runs",
+    "stage": "ready",
+    "failed": false,
+    "workers": 0,
+    "strong": 0,
+    "researchers": 0,
+    "merge_position": null,
+    "merge_percent": null,
+    "started_at": "2026-10-23T14:02:58Z",
+    "stage_since": "2026-10-23T14:02:58Z",
+    "units": {
+     "done": 2,
+     "total": 2
+    },
+    "wait": {
+     "reason": "merge of branch i333 (result var/agentops/results/20261023T…",
+     "until": null
+    },
+    "returned": false
+   },
+   {
+    "number": 340,
+    "title": "The monitor moves to a browser page on this PC, with all it does today and more",
+    "stage": "ready",
+    "failed": false,
+    "workers": 0,
+    "strong": 0,
+    "researchers": 0,
+    "merge_position": null,
+    "merge_percent": null,
+    "started_at": "2026-10-23T15:31:00Z",
+    "stage_since": "2026-10-23T15:31:00Z",
+    "units": null,
+    "wait": null,
+    "returned": false
+   },
+   {
+    "number": 343,
+    "title": "Every heavy test run of the merge flow runs on GitHub, the map build first",
+    "stage": "ready",
+    "failed": false,
+    "workers": 0,
+    "strong": 0,
+    "researchers": 0,
+    "merge_position": null,
+    "merge_percent": null,
+    "started_at": "2026-10-23T16:36:25Z",
+    "stage_since": "2026-10-23T16:36:25Z",
+    "units": null,
+    "wait": null,
+    "returned": false
+   },
+   {
+    "number": 345,
+    "title": "Failed GitHub tests are read in full instead of falling back to the PC",
+    "stage": "ready",
+    "failed": false,
+    "workers": 0,
+    "strong": 0,
+    "researchers": 0,
+    "merge_position": null,
+    "merge_percent": null,
+    "started_at": "2026-10-23T17:11:20Z",
+    "stage_since": "2026-10-23T17:11:20Z",
+    "units": null,
+    "wait": null,
+    "returned": false
+   }
+  ],
+  "version": 1865
+ }
+}
