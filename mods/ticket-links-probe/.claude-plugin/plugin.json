@@ -1,0 +1,6 @@
+{
+  "name": "ticket-links-probe",
+  "version": "0.1.0",
+  "description": "Throwaway probe (#176 row 13): logs each desktop AssistantMessage render and whether ticket-links drew it",
+  "author": { "name": "orchestration core" }
+}
